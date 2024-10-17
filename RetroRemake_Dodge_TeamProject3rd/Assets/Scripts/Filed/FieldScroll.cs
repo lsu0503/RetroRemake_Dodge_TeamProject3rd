@@ -25,7 +25,7 @@ public class FieldScroll : MonoBehaviour
             }
         }
 
-    transform.position += Vector3.left * velocity * Time.deltaTime;
+        transform.position += Vector3.left * velocity * Time.deltaTime;
         if (transform.position.x < -scrollRange)
         {
             transform.position += Vector3.right * scrollRange * 3f;
