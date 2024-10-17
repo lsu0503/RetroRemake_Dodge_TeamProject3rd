@@ -1,12 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO.Enumeration;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ProjectileSO", menuName = "Projectile/ProjectileData/Default", order = 0)]
-public class ProjectileData : ScriptableObject
+[Serializable]
+public class ProjectileData : MonoBehaviour
 {
-    [Header("ProjectileInfo")]
+    
     public float duration;  //투사체의 지속시간
 
     public float size;  //투사체 크기

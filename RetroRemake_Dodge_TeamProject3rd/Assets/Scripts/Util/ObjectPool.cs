@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    public static ObjectPool Instance;
    public class Pool
     {
         public string nameTag;
@@ -17,12 +18,26 @@ public class ObjectPool : MonoBehaviour
 
     private void Awake()
     {
+        if(Instance == null)
+        {
+            Instance = this;
+            AddDictionary();
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+    }
+    public void AddDictionary()
+    {
         PoolDictionary = new Dictionary<string, Queue<GameObject>>();
 
-        foreach(var pool in pools)
+        foreach (var pool in pools)
         {
             Queue<GameObject> queue = new Queue<GameObject>();
-            for(int i =0; i < pool.poolSize; i++)
+            for (int i = 0; i < pool.poolSize; i++)
             {
                 GameObject projectile = Instantiate(pool.prefab);
                 projectile.SetActive(false);
@@ -30,7 +45,6 @@ public class ObjectPool : MonoBehaviour
             }
             PoolDictionary.Add(pool.nameTag, queue);
         }
-        
     }
 
     public GameObject SpawnFromPool(string tag)
