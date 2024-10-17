@@ -5,7 +5,7 @@ using UnityEngine;
 public class FieldScroll : MonoBehaviour
 {
     public float velocity = 1f;
-    public float scrollRange = 20f;
+    public float scrollRange = 30f;
 
     bool isSetBoss;
 
