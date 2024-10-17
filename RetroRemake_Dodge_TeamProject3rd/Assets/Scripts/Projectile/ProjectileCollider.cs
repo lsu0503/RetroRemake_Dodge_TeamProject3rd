@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileOnHit : MonoBehaviour
+public class ProjectileCollider : MonoBehaviour
 {
 
     private ProjectileData data;
@@ -18,7 +18,7 @@ public class ProjectileOnHit : MonoBehaviour
     {
         tag = data.targetTag;
 
-        if (Equals(tag, collision.tag))
+        if (collision.gameObject.CompareTag(tag))
         {
 
             //태그 같다면 피격 로직을 발동
