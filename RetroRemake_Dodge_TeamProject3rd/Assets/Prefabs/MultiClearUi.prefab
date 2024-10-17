@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 1210832872829397310}
   - component: {fileID: 3265069854992858257}
   - component: {fileID: 1508506482692068445}
+  - component: {fileID: 3231271371074586425}
   m_Layer: 5
   m_Name: RetryBtn
   m_TagString: Untagged
@@ -254,7 +255,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3265069854992858257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3231271371074586425}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3231271371074586425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418417839035031429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa663dce70eb02f49b9b242c4010db30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &629836218649442913
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8426024667238232765}
   m_Layer: 5
-  m_Name: MultiWinnerUi
+  m_Name: MultiClearUi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -651,6 +676,7 @@ GameObject:
   - component: {fileID: 7374148397050113578}
   - component: {fileID: 5102931057489953376}
   - component: {fileID: 8438043446626144825}
+  - component: {fileID: 3602201619584101772}
   m_Layer: 5
   m_Name: ReturnTitleBtn
   m_TagString: Untagged
@@ -759,7 +785,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5102931057489953376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3602201619584101772}
+        m_TargetAssemblyTypeName: Button, Assembly-CSharp
+        m_MethodName: ReturnTitile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3602201619584101772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8009278345875685668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa663dce70eb02f49b9b242c4010db30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3360376819984761735
 PrefabInstance:
   m_ObjectHideFlags: 0
