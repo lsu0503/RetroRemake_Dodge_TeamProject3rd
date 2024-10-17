@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 88304556}
   - component: {fileID: 88304559}
   - component: {fileID: 88304558}
-  - component: {fileID: 88304557}
+  - component: {fileID: 88304560}
   m_Layer: 0
   m_Name: Field3
   m_TagString: Untagged
@@ -157,20 +157,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 735033717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &88304557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88304555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 1
-  scrollRange: 30
 --- !u!483693784 &88304558
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -211,7 +197,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4838,6 +4824,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &88304560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88304555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
+  scrollRange: 30
+  acceleration: 0.01
+  deceleration: 0.01
+  highVelocity: 4
 --- !u!1 &170616830
 GameObject:
   m_ObjectHideFlags: 0
@@ -4957,7 +4960,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9596,8 +9599,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1
+  velocity: 0
   scrollRange: 30
+  acceleration: 0.01
+  deceleration: 0.01
+  highVelocity: 4
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9781,7 +9787,7 @@ GameObject:
   - component: {fileID: 1061739837}
   - component: {fileID: 1061739840}
   - component: {fileID: 1061739839}
-  - component: {fileID: 1061739838}
+  - component: {fileID: 1061739841}
   m_Layer: 0
   m_Name: Field4
   m_TagString: Untagged
@@ -9804,20 +9810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 735033717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1061739838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061739836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 1
-  scrollRange: 30
 --- !u!483693784 &1061739839
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -9858,7 +9850,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -14485,6 +14477,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1061739841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061739836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
+  scrollRange: 30
+  acceleration: 0.01
+  deceleration: 0.01
+  highVelocity: 4
 --- !u!1 &1568917004
 GameObject:
   m_ObjectHideFlags: 0
@@ -14496,7 +14505,7 @@ GameObject:
   - component: {fileID: 1568917005}
   - component: {fileID: 1568917008}
   - component: {fileID: 1568917007}
-  - component: {fileID: 1568917006}
+  - component: {fileID: 1568917009}
   m_Layer: 0
   m_Name: Field2
   m_TagString: Untagged
@@ -14519,20 +14528,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 735033717}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1568917006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568917004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: 1
-  scrollRange: 30
 --- !u!483693784 &1568917007
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -14573,7 +14568,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -100
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -19200,6 +19195,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1568917009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568917004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4506281205d43843b3af6fc19792371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: 0
+  scrollRange: 30
+  acceleration: 0.01
+  deceleration: 0.01
+  highVelocity: 4
 --- !u!1 &1707384534
 GameObject:
   m_ObjectHideFlags: 0
