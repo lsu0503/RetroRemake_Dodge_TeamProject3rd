@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FieldScroll : MonoBehaviour
 {
-    public float velocity = 1f;
+    public float velocity = 0f;
     public float scrollRange = 30f;
+    public float acceleration = 0.01f;
+    public float deceleration = 0.01f;
+    public float highVelocity = 4f;
 
-    bool isSetBoss;
+    public static bool isBossSet = false;
 
     private void Update()
     {
@@ -16,19 +19,37 @@ public class FieldScroll : MonoBehaviour
 
     public void ScrollField()
     {
-        if (isSetBoss == true)
+        if (isBossSet == false)
         {
-            velocity -= 0.1f * Time.deltaTime;
-            if (velocity <= 0f)
+            velocity += acceleration;
+            if( velocity >= highVelocity)
             {
-                velocity = 0f;
+                velocity = highVelocity;
+            }
+        }
+        else
+        {
+            velocity -= deceleration;
+            if (velocity <= 0)
+            {
+                velocity = 0;
             }
         }
 
         transform.position += Vector3.left * velocity * Time.deltaTime;
         if (transform.position.x < -scrollRange)
         {
-            transform.position += Vector3.right * scrollRange * 3f;
+            transform.position += Vector3.right * scrollRange * 4f;
         }
+    }
+
+    public static void SetBossTrue()
+    {
+        isBossSet = true;
+    }
+
+    public static void SetBossFalse()
+    { 
+        isBossSet = false; 
     }
 }
