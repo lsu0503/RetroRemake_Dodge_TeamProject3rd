@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ResultUiButton : MonoBehaviour
 {
-    public void ReturnTitile()
+    public void ReturnTitileBtn()
     {
         SceneManager.LoadScene("TitleScene");
     }
-    public void Retry()
+    public void RetryBtn()
     {
         SceneManager.LoadScene("MainScene");
     }
