@@ -6,8 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    int difficulty = 0;
-    public bool isMultiplay {  get; private set; }
+    public int difficulty = 0;
+    public bool isMultiplay;
 
     private void Awake()
     {
@@ -22,6 +22,4 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    
 }
