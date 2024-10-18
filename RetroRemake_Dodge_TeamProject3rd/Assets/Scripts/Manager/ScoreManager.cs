@@ -8,8 +8,9 @@ public class ScoreManager : MonoBehaviour
 
     public int player1Score { get; private set; }
     public int player2Score { get; private set; }
+    
 
-    List<float[]> DamageRatio = new List<float[]>();  
+    public List<float[]> DamageRatio = new List<float[]>();  
 
 
     private void Awake()
@@ -26,7 +27,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public int IndividualScore(int playerNum, int amount)
+    public int GainScore(int playerNum, int amount)
     {
         switch (playerNum)
         {
@@ -48,4 +49,7 @@ public class ScoreManager : MonoBehaviour
     {
         
     }
+    
+        
+    
 }
