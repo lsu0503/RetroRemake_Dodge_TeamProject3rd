@@ -12,6 +12,8 @@ public class FieldScroll : MonoBehaviour
 
     public static bool isBossSet = false;
 
+    public GameObject[] fields;
+
     private void Update()
     {
         ScrollField();
@@ -22,7 +24,7 @@ public class FieldScroll : MonoBehaviour
         if (isBossSet == false)
         {
             velocity += acceleration;
-            if( velocity >= highVelocity)
+            if (velocity >= highVelocity)
             {
                 velocity = highVelocity;
             }
@@ -36,13 +38,16 @@ public class FieldScroll : MonoBehaviour
             }
         }
 
-        transform.position += Vector3.left * velocity * Time.deltaTime;
-        if (transform.position.x < -scrollRange)
+        for (int i = 0; i < fields.Length; i++)
         {
-            transform.position += Vector3.right * scrollRange * 4f;
+            fields[i].transform.position += Vector3.left * velocity * Time.deltaTime;
+            if (fields[i].transform.position.x < -scrollRange * 1.5f)
+            {
+                fields[i].transform.position += Vector3.right * scrollRange * 4f;
+            }
         }
     }
-
+    
     public static void SetBossTrue()
     {
         isBossSet = true;

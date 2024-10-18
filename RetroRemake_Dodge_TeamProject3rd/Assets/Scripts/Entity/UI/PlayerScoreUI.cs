@@ -12,9 +12,11 @@ public class PlayerScoreUI : MonoBehaviour
         {
             case 0:
                 playerNumberText.text = "P1";
+                playerNumberText.text = ScoreManager.instance.player1Score.ToString();
                 break;
             case 1:
                 playerNumberText.text = "P2";
+                playerNumberText.text = ScoreManager.instance.player2Score.ToString();
                 break;
         }
     }
