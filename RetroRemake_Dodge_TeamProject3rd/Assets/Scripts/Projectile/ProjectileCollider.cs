@@ -9,24 +9,20 @@ public class ProjectileCollider : MonoBehaviour
 
     private void Awake()
     {
-
+        Debug.Log("데이터가 초기화 되었습니다");
         data = GetComponent<ProjectileData>();
 
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        tag = data.targetTag;
-
-        if (collision.gameObject.CompareTag(tag))
+        if (collision.gameObject.CompareTag(data.targetTag))
         {
-
-            //태그 같다면 피격 로직을 발동
+            //OnHit();
+            gameObject.SetActive(false);
 
         }
-        gameObject.SetActive(false);
-        //충돌한 투사체 오브젝트는 비활성화됨
-    }
 
+    }
 
 }

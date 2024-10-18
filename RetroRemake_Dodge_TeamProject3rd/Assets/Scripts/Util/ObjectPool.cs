@@ -62,5 +62,10 @@ public class ObjectPool : MonoBehaviour
 
 
     }
+    public void ReturnObject(GameObject obj)
+    {
+        Debug.Log("오브젝트의 큐가 반환됩니다");
+        obj.SetActive(false);
+    }
 
 }

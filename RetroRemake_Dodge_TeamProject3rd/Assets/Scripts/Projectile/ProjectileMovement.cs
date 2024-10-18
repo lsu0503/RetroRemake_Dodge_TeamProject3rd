@@ -9,28 +9,32 @@ public class ProjectileMovement : MonoBehaviour
 
     private float currentDuration;
 
-
     private void Awake()
     {
         projectileRigidbody = GetComponent<Rigidbody2D>();
         trailRenderer = GetComponent<TrailRenderer>();
-        currentDuration = 0;
         data = GetComponent<ProjectileData>();
+        currentDuration = 0;
 
     }
-
-
     private void Update()
     {
-        currentDuration += Time.deltaTime;
 
+        currentDuration += Time.deltaTime;
         if (currentDuration > data.duration)
         {
-            ObjectPool.Instance.gameObject.SetActive(false);
+            ObjectPool.Instance.ReturnObject(gameObject);
         }
         projectileRigidbody.velocity = gameObject.transform.right * data.speed;
-        //발사각도 
-        //
+
+    }
+    public void InitializeAttack(Vector2 direction, Vector3 startPosition)
+    {
+        currentDuration = 0;
+        transform.position = startPosition;
+        projectileRigidbody.velocity = direction * data.speed;
+        transform.right = direction;
+
     }
 
 
