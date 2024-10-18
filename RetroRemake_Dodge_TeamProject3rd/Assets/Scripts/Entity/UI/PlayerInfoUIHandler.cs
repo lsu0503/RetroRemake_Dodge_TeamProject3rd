@@ -23,8 +23,17 @@ public class PlayerInfoUIHandler: MonoBehaviour
         }
         else if (playerNum == 1)
         {
-            thisPlayerData = PlayerManager.instance.player2Data;
-            imageComponent.sprite = characterImg[1];
+            if (GameManager.Instance.isMultiplay)
+            {
+                thisPlayerData = PlayerManager.instance.player2Data;
+                imageComponent.sprite = characterImg[1];
+            }
+
+            else
+            {
+                Destroy(gameObject);
+                return;
+            }
         }
 
         UpdatePlayerLife();
