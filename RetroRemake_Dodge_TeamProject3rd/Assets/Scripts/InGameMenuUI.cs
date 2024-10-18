@@ -19,10 +19,4 @@ public class InGameMenuUI : MonoBehaviour
             Time.timeScale = 1.0f;
         }
     }
-
-    public void Continue()
-    {
-        InGameMenu.SetActive(false);
-        Time.timeScale = 1.0f;
-    }
 }
