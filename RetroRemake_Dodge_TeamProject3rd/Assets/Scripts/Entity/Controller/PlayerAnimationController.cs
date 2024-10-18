@@ -16,7 +16,7 @@ public class PlayerAnimationController : AnimationController
     {
         if (vector.magnitude > magnituteThreshold)
         {
-            if (FieldScroll.isBossSet)
+            if (FieldScroll.isScrollStopped)
             {
                 animator.SetBool(isStop, false);
                 if (vector.x > 0)
@@ -36,7 +36,7 @@ public class PlayerAnimationController : AnimationController
 
         else
         {
-            if (FieldScroll.isBossSet)
+            if (FieldScroll.isScrollStopped)
                 animator.SetBool(isStop, true);
             else
             {
