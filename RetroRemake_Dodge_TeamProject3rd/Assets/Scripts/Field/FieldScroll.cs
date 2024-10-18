@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class FieldScroll : MonoBehaviour
 {
-    public float velocity = 0f;
-    public float scrollRange = 30f;
-    public float acceleration = 0.01f;
-    public float deceleration = 0.01f;
-    public float highVelocity = 4f;
+    private float velocity = 0f;
+    private float scrollRange = 30f;
+    [SerializeField] private float acceleration = 0.01f;
+    [SerializeField] private float deceleration = 0.01f;
+    [SerializeField] private float highVelocity = 4f;
 
-    public static bool isBossSet = false;
+    public static bool isScrollStopped = false;
 
-    public GameObject[] fields;
+    [SerializeField] private GameObject[] fields;
 
     private void Update()
     {
         ScrollField();
     }
 
-    public void ScrollField()
+    private void ScrollField()
     {
-        if (isBossSet == false)
+        if (isScrollStopped == false)
         {
             velocity += acceleration;
             if (velocity >= highVelocity)
@@ -48,13 +48,13 @@ public class FieldScroll : MonoBehaviour
         }
     }
     
-    public static void SetBossTrue()
+    public static void SetScrollStop()
     {
-        isBossSet = true;
+        isScrollStopped = true;
     }
 
-    public static void SetBossFalse()
-    { 
-        isBossSet = false; 
+    public static void SetScrollRestart()
+    {
+        isScrollStopped = false; 
     }
 }
