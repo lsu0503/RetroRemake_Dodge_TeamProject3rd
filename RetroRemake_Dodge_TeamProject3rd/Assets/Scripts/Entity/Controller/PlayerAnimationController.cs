@@ -21,16 +21,20 @@ public class PlayerAnimationController : AnimationController
                 animator.SetBool(isStop, false);
                 if (vector.x > 0)
                     animator.SetFloat(runningVelocity, 1.0f);
-                else
+                else if (vector.x < 0)
                     animator.SetFloat(runningVelocity, -1.0f);
+                else
+                    animator.SetFloat(runningVelocity, 0.5f);
             }
 
             else
             {
                 if (vector.x > 0)
                     animator.SetFloat(runningVelocity, 2.0f);
+                else if (vector.x < 0)
+                    animator.SetFloat(runningVelocity, -0.5f);
                 else
-                    animator.SetFloat(runningVelocity, 0.5f);
+                    animator.SetFloat(runningVelocity, 1.0f);
             }
         }
 
