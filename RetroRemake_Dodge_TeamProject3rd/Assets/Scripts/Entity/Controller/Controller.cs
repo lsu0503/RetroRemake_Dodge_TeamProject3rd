@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour
     private float timeSinceLastAttack = float.MaxValue;
     [SerializeField] protected float timeToNextAttack = 0.5f;
 
-    private void Update()
+    private void FixedUpdate()
     {
         HandleAttackDelay();
     }
