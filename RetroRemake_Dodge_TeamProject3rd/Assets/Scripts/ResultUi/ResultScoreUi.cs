@@ -11,20 +11,24 @@ public class ResultScoreUi : MonoBehaviour
     public int ResultLifeScore { get; private set; }
     public int ResultBombScore { get; private set; }
 
-
+    PlayerData playerData;
     [SerializeField] private TextMeshProUGUI p1ResultLifeScoreText;
     [SerializeField] private TextMeshProUGUI p1ResultBombScoreText;
     [SerializeField] private TextMeshProUGUI p2ResultLifeScoreText;
     [SerializeField] private TextMeshProUGUI p2ResultBombScoreText;
 
 
-    public void SetResultPlayerScoreUi()
+    public void SetResultPlayer1ScoreUi()
     {
-        p1ResultLifeScoreText.text = ResultLifeScore.ToString();
-        p1ResultBombScoreText.text = ResultBombScore.ToString();
-        p2ResultLifeScoreText.text = ResultLifeScore.ToString();
-        p2ResultBombScoreText.text = ResultBombScore.ToString();
+        p1ResultLifeScoreText.text = $"x {ResultLifeScore}";
+        p1ResultBombScoreText.text = $"x {ResultBombScore}";
 
+
+    }
+    public void SetResultPlayer2ScoreUi()
+    {
+        p2ResultLifeScoreText.text = $"x {ResultLifeScore}";
+        p2ResultBombScoreText.text = $"x {ResultBombScore}";
     }
 
     public void Specificityofhit(int playerNum)
