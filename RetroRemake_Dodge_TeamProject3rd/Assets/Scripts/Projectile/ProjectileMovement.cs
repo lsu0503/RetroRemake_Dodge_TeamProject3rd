@@ -14,8 +14,14 @@ public class ProjectileMovement : MonoBehaviour
         data = GetComponent<ProjectileData>();
     }
 
-    private void Update()
+    private void OnEnable()
     {
-        projectileRigidbody.velocity = gameObject.transform.right * data.speed;
+        projectileRigidbody.AddForce(transform.right * data.speed, ForceMode2D.Impulse);
+    }
+
+    public void SetVelocity(Vector2 _velocity)
+    {
+        projectileRigidbody.velocity = Vector2.zero;
+        projectileRigidbody.AddForce(_velocity, ForceMode2D.Impulse);
     }
 }
