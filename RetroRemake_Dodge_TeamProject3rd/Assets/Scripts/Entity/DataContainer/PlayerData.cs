@@ -9,7 +9,7 @@ public class PlayerData : MonoBehaviour
     public int bomb { get; private set; }
     public bool isAlive { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         life = 3;
         bomb = 3;

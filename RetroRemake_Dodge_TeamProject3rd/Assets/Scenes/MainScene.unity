@@ -10037,7 +10037,7 @@ MonoBehaviour:
   timeToNextAttack: 0.5
   projSpawnPos: {fileID: 1318165713}
   projAngleSpace: 15
-  ProjsPerShot: 3
+  projsPerShot: 0
   projTag: BreathBall
 --- !u!114 &606170649
 MonoBehaviour:
@@ -15299,7 +15299,7 @@ MonoBehaviour:
   timeToNextAttack: 0.5
   projSpawnPos: {fileID: 240065731}
   projAngleSpace: 15
-  ProjsPerShot: 3
+  projsPerShot: 0
   projTag: BreathBall
 --- !u!114 &1298821226
 MonoBehaviour:
@@ -20390,7 +20390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 0
-  isMultiplay: 0
+  isMultiplay: 1
 --- !u!4 &1678895373
 Transform:
   m_ObjectHideFlags: 0
