@@ -96,11 +96,10 @@ GameObject:
   - component: {fileID: 7255590805703988947}
   - component: {fileID: 2843723796279192281}
   - component: {fileID: 4222690253015004476}
+  - component: {fileID: 4946812930130876105}
   - component: {fileID: 1658707244490804474}
   - component: {fileID: 1560758551507438062}
   - component: {fileID: 3686261232949011094}
-  - component: {fileID: 524014473448990738}
-  - component: {fileID: 4946812930130876105}
   m_Layer: 6
   m_Name: BreathBall
   m_TagString: Untagged
@@ -316,65 +315,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1658707244490804474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714296746097185940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f13e8c8d6c8e4c64dac03b0b0d8e4ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 2
-  size: 1
-  speed: 4
-  power: 2
-  targetTag: Enemy
-  type: 0
---- !u!114 &1560758551507438062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714296746097185940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceddc2abd6af3634ca159531bc2e9c99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 0}
---- !u!114 &3686261232949011094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714296746097185940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed14b287c4e99d849bf001268607ca0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &524014473448990738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3714296746097185940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31ed1f15081a9c49b106e02bf789983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isProofUp: 0
-  isProofDown: 0
-  isProofLeft: 0
-  isProofRight: 0
 --- !u!58 &4946812930130876105
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -410,3 +350,47 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1658707244490804474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714296746097185940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13e8c8d6c8e4c64dac03b0b0d8e4ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  size: 1
+  speed: 4
+  power: 2
+  targetTag: Enemy
+  type: 0
+  isInPool: 1
+--- !u!114 &1560758551507438062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714296746097185940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceddc2abd6af3634ca159531bc2e9c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 0}
+--- !u!114 &3686261232949011094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3714296746097185940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed14b287c4e99d849bf001268607ca0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

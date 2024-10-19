@@ -37,8 +37,8 @@ public class PlayerCharacterBehavior : CharacterBehavior
         {
             CallHitEvent(damage);
             data.LoseLife();
-            CallDieEvent();
-            CallSpawnEvent();
+            Invoke("CallDieEvent", 2.5f);
+            Invoke("CallSpawnEvent", 5.0f);
             return true;
         }
 
@@ -71,7 +71,11 @@ public class PlayerCharacterBehavior : CharacterBehavior
 
     private void OnSpwan()
     {
-        transform.position = new Vector3(-14.5f, 0.0f, 0.0f);
+        if (data.playerNum == 0)
+            transform.position = new Vector3(-14.5f, 2.5f, 0.0f);
+        else
+            transform.position = new Vector3(-14.5f, -2.5f, 0.0f);
+
         recoverTimeCurrent = -2.5f;
     }
 }

@@ -18,14 +18,13 @@ public class ProjectileElimination : MonoBehaviour
 
     public void EliminateBullet(Collider2D collision)
     {
-        //이 스크립트를 붙인 오브젝트에 닿으면 투사체가 비활성화됨 
-        GameObject callObj = collision.gameObject;
-        ProjectileData? targetData = callObj.GetComponent<ProjectileData>();
-
-        if (targetData != null)
+        // Physics2D의 Layer 설정에 의해서 아군의 탄환 혹은 적군의 탄환 끼리는 충돌 판정이 발생하지 않는다.
+        // 따라서, 발사 주체의 확인을 할 필요 없이 탄환 제거만 하면 된다.
+        if (collision.gameObject.CompareTag("Bullet"))
         {
-            if (targetData.type < 0)
-                callObj.SetActive(false);
+            // 개발 상황에 맞춰서 두 기능 중 하나 만 남길 것.
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }

@@ -45,6 +45,7 @@ public class PlayerAttack : ShotBase
         projData.power = power;
         projData.type = playerData.playerNum;
         projData.targetTag = "Enemy";
+        projData.isInPool = true;
 
         projData.InitializeTime();
         projObj.SetActive(true);

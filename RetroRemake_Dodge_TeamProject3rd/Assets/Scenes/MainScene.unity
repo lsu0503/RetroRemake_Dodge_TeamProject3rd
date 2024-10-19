@@ -10887,8 +10887,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projSpawnPos: {fileID: 1318165713}
-  projPref: {fileID: 0}
+  projPref: {fileID: 3714296746097185940, guid: 90d094d152ba533429120277ccc7738c, type: 3}
   delayBomb: 3
+  duration: 10
+  size: 15
+  speed: 5
+  power: 100
 --- !u!1 &705454100
 GameObject:
   m_ObjectHideFlags: 0
@@ -16170,8 +16174,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projSpawnPos: {fileID: 240065731}
-  projPref: {fileID: 0}
+  projPref: {fileID: 3714296746097185940, guid: 90d094d152ba533429120277ccc7738c, type: 3}
   delayBomb: 3
+  duration: 10
+  size: 15
+  speed: 5
+  power: 100
 --- !u!1 &1318165712
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,8 @@ public class ProjectileData : MonoBehaviour
     public int power; //투사체의 데미지
     public string targetTag; //목표로 하는 대상
     public int type; //발사체 사용자 타입
+    
+    public bool isInPool; // 풀에 등록되어 있는지 여부
 
     private float currentDuration;
 
@@ -23,7 +25,11 @@ public class ProjectileData : MonoBehaviour
         currentDuration += Time.deltaTime;
         if (currentDuration > duration)
         {
-            gameObject.SetActive(false);
+            if (isInPool)
+                gameObject.SetActive(false);
+
+            else
+                Destroy(gameObject);
         }
     }
 
