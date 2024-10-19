@@ -2,46 +2,43 @@
 
 public class ProjectileRicochet : MonoBehaviour
 {
-    [SerializeField] private bool isProofUp = false;
-    [SerializeField] private bool isProofDown = false;
-    [SerializeField] private bool isProofRight = false;
-    [SerializeField] private bool isProofLeft = false;
+    [SerializeField] private bool isProofUp;
+    [SerializeField] private bool isProofDown;
+    [SerializeField] private bool isProofRight;
+    [SerializeField] private bool isProofLeft;
 
-    Rigidbody2D rb2D;
+    private Rigidbody2D rb2D;
+
+    private ProjectileCollider projectileCollider;
 
     public void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        projectileCollider = GetComponent<ProjectileCollider>();
+    }
+    private void Start()
+    {
+        projectileCollider.OnCollisionEvent += AdjustRicochet;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void AdjustRicochet(string collisionTag)
     {
-        GameObject collisionObj = collision.gameObject;
-        Vector2 contact = collision.contacts[0].normal;
         //충돌 지점 첫번째 접촉점의 벡터값
-        if (collisionObj.CompareTag("BorderUp") && isProofUp)
+        if (collisionTag =="BorderUp" && isProofUp)
         {
-            float angle = 0f; //반사각도 조절 
-            Vector2 reflect = Vector2.Reflect(rb2D.velocity, contact);
-            rb2D.velocity = Quaternion.Euler(0,0,angle) * reflect;
+            rb2D.velocity = new Vector2(rb2D.velocity.x,-rb2D.velocity.y);
         }
-        else if (collisionObj.CompareTag("BorderDown") && isProofDown)
+        else if (collisionTag == "BorderDown" && isProofDown)
         {
-            float angle = 0f;
-            Vector2 reflect = Vector2.Reflect(rb2D.velocity, contact);
-            rb2D.velocity = Quaternion.Euler(0,0,angle) * reflect;
+            rb2D.velocity = new Vector2(rb2D.velocity.x, -rb2D.velocity.y);
         }
-        else if (collisionObj.CompareTag("BorderRight") && isProofRight)
+        else if (collisionTag == "BorderRight" && isProofRight)
         {
-            float angle = 0f;
-            Vector2 reflect = Vector2.Reflect(rb2D.velocity, contact);
-            rb2D.velocity = Quaternion.Euler(0, 0, angle) * reflect;
+            rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
         }
-        else if (collisionObj.CompareTag("BorderLeft") && isProofLeft)
+        else if (collisionTag == "BorderLeft" && isProofLeft)
         {
-            float angle = 0f;
-            Vector2 reflect = Vector2.Reflect(rb2D.velocity, contact);
-            rb2D.velocity = Quaternion.Euler(0, 0, angle) * reflect;
+            rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
         }
     }
 }

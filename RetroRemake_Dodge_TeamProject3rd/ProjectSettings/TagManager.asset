@@ -10,8 +10,6 @@ TagManager:
   - BorderDown
   - BorderRight
   - BorderLeft
-  - BorderY
-  - BorderX
   - Enemy
   layers:
   - Default

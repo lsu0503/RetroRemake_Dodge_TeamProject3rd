@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileCollider : MonoBehaviour
 {
+    public event Action<string> OnCollisionEvent;
     private ProjectileData data;
 
     private void Awake()
@@ -14,6 +16,7 @@ public class ProjectileCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        OnCollisionEvent?.Invoke(collision.gameObject.tag);
         if (collision.gameObject.CompareTag(data.targetTag))
         {
             //OnHit
