@@ -6,32 +6,20 @@ public class Controller : MonoBehaviour
 {
     public event Action<Vector2> OnMoveEvent;
     public event Action OnAttackEvent;
+    public event Action OnBombEvent;
     
-    protected bool isAttacking { get; set; }
-    private float timeSinceLastAttack = float.MaxValue;
-    [SerializeField] protected float timeToNextAttack = 0.5f;
-    
-    private void HandleAttackDelay()
-    {
-        if(timeSinceLastAttack < timeToNextAttack)
-        {
-            timeSinceLastAttack += Time.deltaTime;
-        }
-
-        else if (isAttacking)
-        {
-            timeSinceLastAttack = 0.0f;
-            CallAttackEvent();
-        }
-    }
-
     public void CallMoveEvent(Vector2 direction)
     {
         OnMoveEvent?.Invoke(direction);
     }
 
-    private void CallAttackEvent()
+    public void CallAttackEvent()
     {
         OnAttackEvent?.Invoke();
+    }
+
+    public void CallBombEvent()
+    {
+        OnBombEvent?.Invoke();
     }
 }

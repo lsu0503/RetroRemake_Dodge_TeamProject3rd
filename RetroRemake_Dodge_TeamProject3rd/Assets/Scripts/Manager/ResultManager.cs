@@ -16,7 +16,7 @@ public class ResultManager : MonoBehaviour
     PlayerData? Player2;
 
     public bool isCleared {  get; private set; }
-    public bool GameOver { get; private set; }
+    public bool GameOver { get; private set; } = false;
 
     private void Awake()
     {

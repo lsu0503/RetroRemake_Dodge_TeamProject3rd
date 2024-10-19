@@ -9,7 +9,6 @@ public class Movement : MonoBehaviour
 
     [SerializeField] float velocity = 8.0f;
     
-
     private Vector2 movementDirection = Vector2.zero;
 
     private void Awake()

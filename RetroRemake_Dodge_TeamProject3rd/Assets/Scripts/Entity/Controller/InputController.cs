@@ -3,17 +3,20 @@ using UnityEngine.InputSystem;
 
 public class InputController : Controller
 {
-    [SerializeField] private int playerNum;
+    private PlayerData data;
     private PlayerInput playerInput;
+    private PlayerAttack playerAttack;
 
     private void Awake()
     {
+        data = GetComponent<PlayerData>();
         playerInput = GetComponent<PlayerInput>();
+        playerAttack = GetComponent<PlayerAttack>();
     }
 
     private void Start()
     {
-        if(playerNum == 0)
+        if(data.playerNum == 0)
         {
             if (!GameManager.Instance.isMultiplay)
                 playerInput.SwitchCurrentActionMap("SinglePlayer");
@@ -21,7 +24,7 @@ public class InputController : Controller
                 playerInput.SwitchCurrentActionMap("Player1");
         }
 
-        else if(playerNum == 1)
+        else if(data.playerNum == 1)
         {
             if (!GameManager.Instance.isMultiplay)
                 Destroy(gameObject);
@@ -38,7 +41,11 @@ public class InputController : Controller
 
     public void OnAttack(InputValue value)
     {
-        isAttacking = value.isPressed;
-        Debug.Log(isAttacking);
+        playerAttack.isAttacking = value.isPressed;
+    }
+
+    public void OnBomb(InputValue value)
+    {
+        CallBombEvent();
     }
 }

@@ -4888,7 +4888,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240065731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9620,9 +9620,9 @@ GameObject:
   m_Component:
   - component: {fileID: 272199187}
   - component: {fileID: 272199188}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitPoint
-  m_TagString: Untagged
+  m_TagString: HitPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9827,9 +9827,14 @@ GameObject:
   - component: {fileID: 606170640}
   - component: {fileID: 606170639}
   - component: {fileID: 606170644}
-  m_Layer: 0
+  - component: {fileID: 606170645}
+  - component: {fileID: 606170647}
+  - component: {fileID: 606170646}
+  - component: {fileID: 606170648}
+  - component: {fileID: 606170649}
+  m_Layer: 6
   m_Name: Player2Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9859,8 +9864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c8b3ef9aa3cb148a1671636d5388dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToNextAttack: 0.5
-  playerNum: 1
 --- !u!61 &606170641
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9981,6 +9984,76 @@ MonoBehaviour:
   m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &606170645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606170637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ebb88b51795ac45aa11db9e44d8637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &606170646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606170637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8055f00a32e0c4a4ca034d66581f2a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &606170647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606170637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a70080e6feb904d94cf06d2e0b9987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 1
+--- !u!114 &606170648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606170637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0f2e61f9f3fcc4b9683f89e6c01122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  timeToNextAttack: 0.5
+  projSpawnPos: {fileID: 1318165713}
+  projAngleSpace: 15
+  ProjsPerShot: 3
+  projTag: BreathBall
+--- !u!114 &606170649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606170637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d849783f496e4104388ccf5e29e93bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projSpawnPos: {fileID: 1318165713}
+  projPref: {fileID: 0}
+  delayBomb: 3
 --- !u!1 &705454100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9991,9 +10064,9 @@ GameObject:
   m_Component:
   - component: {fileID: 705454101}
   - component: {fileID: 705454102}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitPoint
-  m_TagString: Untagged
+  m_TagString: HitPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10160,7 +10233,7 @@ GameObject:
   - component: {fileID: 932156693}
   - component: {fileID: 932156694}
   - component: {fileID: 932156695}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14955,6 +15028,53 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1274911929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274911931}
+  - component: {fileID: 1274911930}
+  m_Layer: 0
+  m_Name: ResultManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1274911930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274911929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5eb0c67a17be0b42af9238edb6d3d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoloClearUi: {fileID: 1811643507513220687, guid: 3c620fe75d80b3a45b857e427abef367, type: 3}
+  MultiClearUi: {fileID: 7304466480468842750, guid: cd957a234eda2754f9c47944b1fb3709, type: 3}
+  DefeatUi: {fileID: 8306426939347756193, guid: 7d710c802185012449cb86ba0a98e326, type: 3}
+--- !u!4 &1274911931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274911929}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1298821215
 GameObject:
   m_ObjectHideFlags: 0
@@ -14969,9 +15089,14 @@ GameObject:
   - component: {fileID: 1298821221}
   - component: {fileID: 1298821220}
   - component: {fileID: 1298821219}
-  m_Layer: 0
+  - component: {fileID: 1298821222}
+  - component: {fileID: 1298821224}
+  - component: {fileID: 1298821223}
+  - component: {fileID: 1298821225}
+  - component: {fileID: 1298821226}
+  m_Layer: 6
   m_Name: Player1Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15121,8 +15246,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c8b3ef9aa3cb148a1671636d5388dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToNextAttack: 0.5
+--- !u!114 &1298821222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2ebb88b51795ac45aa11db9e44d8637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1298821223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8055f00a32e0c4a4ca034d66581f2a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1298821224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a70080e6feb904d94cf06d2e0b9987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerNum: 0
+--- !u!114 &1298821225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0f2e61f9f3fcc4b9683f89e6c01122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  timeToNextAttack: 0.5
+  projSpawnPos: {fileID: 240065731}
+  projAngleSpace: 15
+  ProjsPerShot: 3
+  projTag: BreathBall
+--- !u!114 &1298821226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298821215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d849783f496e4104388ccf5e29e93bfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projSpawnPos: {fileID: 240065731}
+  projPref: {fileID: 0}
+  delayBomb: 3
 --- !u!1 &1318165712
 GameObject:
   m_ObjectHideFlags: 0
@@ -15132,7 +15325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318165713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15162,6 +15355,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 338643744063604746, guid: d819f12ea653f8444836612f3e08c910, type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 606170646}
+    - target: {fileID: 338643744063604746, guid: d819f12ea653f8444836612f3e08c910, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 606170640}
     - target: {fileID: 1193250176511411561, guid: d819f12ea653f8444836612f3e08c910, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15354,6 +15555,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7727574310279577275, guid: d819f12ea653f8444836612f3e08c910, type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 1298821223}
+    - target: {fileID: 7727574310279577275, guid: d819f12ea653f8444836612f3e08c910, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1298821221}
     - target: {fileID: 8436269133924166461, guid: d819f12ea653f8444836612f3e08c910, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15432,7 +15641,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a019cf01954ee0b4ea078354010d1a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Data: {fileID: 1298821224}
   player1Info: {fileID: 1763371341}
+  player2Data: {fileID: 606170647}
   player2Info: {fileID: 35470306}
 --- !u!4 &1555181798
 Transform:
@@ -20179,7 +20390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 0
-  isMultiplay: 1
+  isMultiplay: 0
 --- !u!4 &1678895373
 Transform:
   m_ObjectHideFlags: 0
@@ -21084,7 +21295,7 @@ GameObject:
   - component: {fileID: 2069879007}
   - component: {fileID: 2069879009}
   - component: {fileID: 2069879008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MainSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21193,3 +21404,4 @@ SceneRoots:
   - {fileID: 1555181798}
   - {fileID: 599046016}
   - {fileID: 1678895373}
+  - {fileID: 1274911931}

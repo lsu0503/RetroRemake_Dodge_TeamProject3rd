@@ -14,6 +14,9 @@ public class PlayerInfoUIHandler: MonoBehaviour
     [SerializeField] private Image imageComponent;
     [SerializeField] private Sprite[] characterImg;
 
+    [SerializeField] private CharacterBehavior behavior;
+    [SerializeField] private Controller controller;
+
     private void Start()
     {
         if (playerNum == 0)
@@ -39,6 +42,16 @@ public class PlayerInfoUIHandler: MonoBehaviour
         UpdatePlayerLife();
         UpdatePlayerBomb();
         UpdatePlayerScore();
+
+        behavior.OnDieEvent += UpdatePlayerLife;
+        controller.OnBombEvent += UpdatePlayerBomb;
+        
+    }
+
+    private void Update()
+    {
+        if (!ResultManager.Instance.GameOver)
+            UpdatePlayerScore();
     }
 
     public void UpdatePlayerLife()

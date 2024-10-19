@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class PlayerData
+public class PlayerData : MonoBehaviour
 {
+    public int playerNum;
     public int life { get; private set; }
     public int bomb { get; private set; }
+    public bool isAlive { get; private set; }
 
-    public PlayerData()
+    private void Start()
     {
         life = 3;
         bomb = 3;
+        isAlive = true;
     }
 
     public bool LoseLife()
@@ -23,16 +27,10 @@ public class PlayerData
 
         else
         {
-            if (bomb < 3)
-                bomb = 3;
+            bomb += 2;
 
-            else
-            {
-                bomb += 2;
-
-                if (bomb > 5)
-                    bomb = 5;
-            }
+            if (bomb > 5)
+                bomb = 5;
 
             return true;
         }
@@ -74,6 +72,6 @@ public class PlayerData
 
     public void OnDeath()
     {
-
+        isAlive = false;
     }
 }
