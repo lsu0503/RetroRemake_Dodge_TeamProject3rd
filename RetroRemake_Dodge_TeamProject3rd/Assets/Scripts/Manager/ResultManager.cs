@@ -53,8 +53,26 @@ public class ResultManager : MonoBehaviour
             DefeatUi.SetActive(false);
         }
     }
+    public void GameClear()
+    {
+        GameOver = true;
+        isCleared= true;
+
+        DisplayClearUI(GameManager.Instance.isMultiplay);
+    }
+
+    public void GameDefeat() 
+    {
+        GameOver = true;
+        isCleared= false;
+
+        DisplayDefeatUI();
+    }
+    
+        
 
 
+    
     public void DisplayClearUI(bool isMulti) 
     {
 
