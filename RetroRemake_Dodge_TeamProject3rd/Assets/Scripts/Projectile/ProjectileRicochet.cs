@@ -21,24 +21,19 @@ public class ProjectileRicochet : MonoBehaviour
         projectileCollider.OnCollisionEvent += AdjustRicochet;
     }
 
-    public void AdjustRicochet(string collisionTag)
+    public void AdjustRicochet(Collider2D collision)
     {
         //충돌 지점 첫번째 접촉점의 벡터값
-        if (collisionTag =="BorderUp" && isProofUp)
-        {
+        if (collision.CompareTag("BorderUp") && isProofUp)
             rb2D.velocity = new Vector2(rb2D.velocity.x,-rb2D.velocity.y);
-        }
-        else if (collisionTag == "BorderDown" && isProofDown)
-        {
+
+        else if (collision.CompareTag("BorderDown") && isProofDown)
             rb2D.velocity = new Vector2(rb2D.velocity.x, -rb2D.velocity.y);
-        }
-        else if (collisionTag == "BorderRight" && isProofRight)
-        {
+
+        else if (collision.CompareTag("BorderRight") && isProofRight)
             rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
-        }
-        else if (collisionTag == "BorderLeft" && isProofLeft)
-        {
+
+        else if (collision.CompareTag("BorderLeft") && isProofLeft)
             rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
-        }
     }
 }

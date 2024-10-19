@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6727870918468621988}
   - component: {fileID: 510131761528317461}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 3686261232949011094}
   - component: {fileID: 524014473448990738}
   - component: {fileID: 4946812930130876105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BreathBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,17 +218,17 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.25
+  m_Time: 0.05
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.5
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.24561375
+        value: 0.75487864
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   size: 1
   speed: 4
   power: 2
-  targetTag: Enermy
+  targetTag: Enemy
   type: 0
 --- !u!114 &1560758551507438062
 MonoBehaviour:

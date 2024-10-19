@@ -4,7 +4,15 @@ using UnityEngine;
 public class PlayerAttack : ShotBase
 {
     private PlayerData playerData;
+
+    [Header("Bullet Info")]
+    [SerializeField] private float duration;
+    [SerializeField] private float size;
+    [SerializeField] private float speed;
+    [SerializeField] private int power;
     
+
+    [Header("Shooting Info")]
     [SerializeField] private Transform projSpawnPos;
     [SerializeField] private float projAngleSpace;
     [SerializeField] private int projsPerShot;
@@ -26,12 +34,19 @@ public class PlayerAttack : ShotBase
 
     private void CreateProjectile(float angle)
     {
-        GameObject obj = ObjectPool.Instance.SpawnFromPool(projTag);
-        obj.transform.position = projSpawnPos.position;
-        obj.transform.right = Quaternion.Euler(0.0f, 0.0f, angle) * transform.right;
+        GameObject projObj = StageManager.Instance.objectPool.SpawnFromPool(projTag);
+        projObj.transform.position = projSpawnPos.position;
+        projObj.transform.right = Quaternion.Euler(0.0f, 0.0f, angle) * transform.right;
 
-        ProjectileData projData = obj.GetComponent<ProjectileData>();
+        ProjectileData projData = projObj.GetComponent<ProjectileData>();
+        projData.duration = duration;
+        projData.size = size;
+        projData.speed = speed;
+        projData.power = power;
         projData.type = playerData.playerNum;
         projData.targetTag = "Enemy";
+
+        projData.InitializeTime();
+        projObj.SetActive(true);
     }
 }

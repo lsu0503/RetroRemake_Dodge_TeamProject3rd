@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-public class ResultManager : MonoBehaviour
+public class StageManager : MonoBehaviour
 {
-    public static ResultManager Instance;
+    public static StageManager Instance;
+
+    public ObjectPool objectPool { get; private set; }
 
     [SerializeField] private GameObject SoloClearUi;
     [SerializeField] private GameObject MultiClearUi;
     [SerializeField] private GameObject DefeatUi;
-    
     
     PlayerData Player1;
     PlayerData? Player2;
@@ -20,17 +21,13 @@ public class ResultManager : MonoBehaviour
 
     private void Awake()
     {
-
         if (Instance == null)
-        {
             Instance = this;
-           
-        }
+
         else if (Instance != this)
-        {
             Destroy(gameObject);
-        }
-        
+
+        objectPool = GameObject.FindObjectOfType<ObjectPool>();
     }
 
     private void Start()
@@ -41,17 +38,13 @@ public class ResultManager : MonoBehaviour
     public void InitializeUi()
     {
         if (SoloClearUi == true)
-        {
             SoloClearUi.SetActive(false);
-        }
+        
         else if (MultiClearUi == true)
-        {
             MultiClearUi.SetActive(false);
-        }
+        
         else if (DefeatUi == true)
-        {
             DefeatUi.SetActive(false);
-        }
     }
     public void GameClear()
     {
@@ -69,25 +62,17 @@ public class ResultManager : MonoBehaviour
         DisplayDefeatUI();
     }
     
-        
-
-
-    
     public void DisplayClearUI(bool isMulti) 
     {
-
         if (!isMulti)
-        {
             SoloClearUi.SetActive(true);
-        }
+
         else if (isMulti)
-        {
-            MultiClearUi.SetActive(true);  
-        }
+            MultiClearUi.SetActive(true);
     }
+
     public void DisplayDefeatUI() 
     {
         DefeatUi.SetActive(true);
     }
-    
 }

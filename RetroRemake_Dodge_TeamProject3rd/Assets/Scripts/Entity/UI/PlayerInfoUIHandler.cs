@@ -50,7 +50,7 @@ public class PlayerInfoUIHandler: MonoBehaviour
 
     private void Update()
     {
-        if (!ResultManager.Instance.GameOver)
+        if (!StageManager.Instance.GameOver)
             UpdatePlayerScore();
     }
 
