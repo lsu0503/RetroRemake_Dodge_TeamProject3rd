@@ -5,13 +5,13 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
+
     [System.Serializable]
    public class Pool
     {
         public string nameTag;
         public GameObject prefab;
         public int poolSize;
-        
     }
 
     public List<Pool> pools = new List<Pool>();
@@ -29,7 +29,6 @@ public class ObjectPool : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
     }
     public void AddDictionary()
     {
@@ -44,29 +43,25 @@ public class ObjectPool : MonoBehaviour
                 projectile.SetActive(false);
                 queue.Enqueue(projectile);
             }
+
             PoolDictionary.Add(pool.nameTag, queue);
         }
     }
-
     public GameObject SpawnFromPool(string tag)
     {
         if (!PoolDictionary.ContainsKey(tag))
         {
             return null;
         }
-        
+
         GameObject obj = PoolDictionary[tag].Dequeue();
         PoolDictionary[tag].Enqueue(obj);
-
         obj.SetActive(true);
         return obj;
-
-
     }
     public void ReturnObject(GameObject obj)
     {
         Debug.Log("오브젝트의 큐가 반환됩니다");
         obj.SetActive(false);
     }
-
 }
