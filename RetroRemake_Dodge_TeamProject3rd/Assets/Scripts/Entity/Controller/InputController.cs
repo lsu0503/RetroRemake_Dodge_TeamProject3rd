@@ -41,7 +41,7 @@ public class InputController : Controller
 
     public void OnAttack(InputValue value)
     {
-        playerAttack.isAttacking = value.isPressed;
+        isAttacking = value.isPressed;
     }
 
     public void OnBomb(InputValue value)
