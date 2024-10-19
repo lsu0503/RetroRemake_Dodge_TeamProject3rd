@@ -13,15 +13,14 @@ public class ProjectileData : MonoBehaviour
 
     public float speed; //투사체의 속도
 
-    public float power; //투사체의 데미지
+    public int power; //투사체의 데미지
 
     public string targetTag; //목표로 하는 대상
 
     public int type; //발사체 사용자 타입
 
-    public ProjectileData(int _type)
+    public void setType(int _type)
     {
-        //type 에 따라 targetTag 변경
         type = _type;
     }
 }

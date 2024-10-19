@@ -28,7 +28,7 @@ public class ProjectileMovement : MonoBehaviour
         projectileRigidbody.velocity = gameObject.transform.right * data.speed;
 
     }
-    public void InitializeAttack(Vector2 direction, Vector3 startPosition)
+    public void InitializeSpawn(Vector2 direction, Vector3 startPosition)
     {
         currentDuration = 0;
         transform.position = startPosition;

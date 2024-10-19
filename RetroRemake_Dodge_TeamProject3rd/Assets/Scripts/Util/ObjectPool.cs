@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
+    [System.Serializable]
    public class Pool
     {
         public string nameTag;
