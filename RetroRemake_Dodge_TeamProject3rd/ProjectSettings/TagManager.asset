@@ -6,8 +6,13 @@ TagManager:
   tags:
   - HitPoint
   - Bullet
-  - BorderX
+  - BorderUp
+  - BorderDown
+  - BorderRight
+  - BorderLeft
   - BorderY
+  - BorderX
+  - Enemy
   layers:
   - Default
   - TransparentFX
