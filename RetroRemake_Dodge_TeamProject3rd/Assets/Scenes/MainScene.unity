@@ -10871,8 +10871,8 @@ MonoBehaviour:
   speed: 20
   power: 5
   projSpawnPos: {fileID: 1318165713}
-  projAngleSpace: 0
-  projsPerShot: 1
+  projAngleSpace: 10
+  projsPerShot: 5
   projTag: BreathBall
 --- !u!114 &606170649
 MonoBehaviour:
@@ -15926,7 +15926,7 @@ MonoBehaviour:
   pools:
   - nameTag: BreathBall
     prefab: {fileID: 3714296746097185940, guid: 0403d72dbd5284f41894f5f8f0a2baa9, type: 3}
-    poolSize: 200
+    poolSize: 1000
 --- !u!1 &1298821215
 GameObject:
   m_ObjectHideFlags: 0
@@ -16154,8 +16154,8 @@ MonoBehaviour:
   speed: 20
   power: 5
   projSpawnPos: {fileID: 240065731}
-  projAngleSpace: 0
-  projsPerShot: 1
+  projAngleSpace: 10
+  projsPerShot: 5
   projTag: BreathBall
 --- !u!114 &1298821226
 MonoBehaviour:

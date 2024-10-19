@@ -4,9 +4,9 @@ public class ProjectileRicochet : MonoBehaviour
 {
     [SerializeField] private bool isProofUp;
     [SerializeField] private bool isProofDown;
-    [SerializeField] private bool isProofRight;
     [SerializeField] private bool isProofLeft;
-
+    [SerializeField] private bool isProofRight;
+    
     private Rigidbody2D rb2D;
 
     private ProjectileCollider projectileCollider;
@@ -25,15 +25,15 @@ public class ProjectileRicochet : MonoBehaviour
     {
         //충돌 지점 첫번째 접촉점의 벡터값
         if (collision.CompareTag("BorderUp") && isProofUp)
-            rb2D.velocity = new Vector2(rb2D.velocity.x,-rb2D.velocity.y);
+            rb2D.velocity = new Vector2(rb2D.velocity.x, -rb2D.velocity.y);
 
         else if (collision.CompareTag("BorderDown") && isProofDown)
             rb2D.velocity = new Vector2(rb2D.velocity.x, -rb2D.velocity.y);
 
-        else if (collision.CompareTag("BorderRight") && isProofRight)
+        else if (collision.CompareTag("BorderLeft") && isProofLeft)
             rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
 
-        else if (collision.CompareTag("BorderLeft") && isProofLeft)
+        else if (collision.CompareTag("BorderRight") && isProofRight)
             rb2D.velocity = new Vector2(-rb2D.velocity.x, rb2D.velocity.y);
     }
 }

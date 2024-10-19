@@ -371,10 +371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31ed1f15081a9c49b106e02bf789983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isProofUp: 1
-  isProofDown: 1
-  isProofRight: 1
-  isProofLeft: 1
+  isProofUp: 0
+  isProofDown: 0
+  isProofLeft: 0
+  isProofRight: 0
 --- !u!58 &4946812930130876105
 CircleCollider2D:
   m_ObjectHideFlags: 0
