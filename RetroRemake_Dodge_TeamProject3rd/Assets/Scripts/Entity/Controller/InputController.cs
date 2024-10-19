@@ -5,13 +5,11 @@ public class InputController : Controller
 {
     private PlayerData data;
     private PlayerInput playerInput;
-    private PlayerAttack playerAttack;
 
     private void Awake()
     {
         data = GetComponent<PlayerData>();
         playerInput = GetComponent<PlayerInput>();
-        playerAttack = GetComponent<PlayerAttack>();
     }
 
     private void Start()

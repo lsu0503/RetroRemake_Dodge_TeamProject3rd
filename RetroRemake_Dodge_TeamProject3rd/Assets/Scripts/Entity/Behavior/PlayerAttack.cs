@@ -16,7 +16,7 @@ public class PlayerAttack : ShotBase
         playerData = GetComponent<PlayerData>();
     }
 
-    public override void ActivateAttack()
+    public override void UseAttack()
     {
         float minAngle = -(projsPerShot - 1) / 2f * projAngleSpace;
 
