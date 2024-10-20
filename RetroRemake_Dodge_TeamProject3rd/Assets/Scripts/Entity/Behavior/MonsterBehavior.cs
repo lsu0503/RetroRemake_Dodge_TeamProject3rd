@@ -46,6 +46,8 @@ public class MonsterBehavior : CharacterBehavior
             controller.enabled = false;
         }
 
+        isDie = false;
+
         Destroy(gameObject, 2.0f);
     }
 }

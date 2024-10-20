@@ -114,6 +114,8 @@ public class PlayerCharacterBehavior : CharacterBehavior
             controller.enabled = true;
         }
 
+        isDie = false;
+
         gameObject.SetActive(true);
     }
 }
