@@ -2,10 +2,21 @@
 
 public class BossMonsterBehavior: MonsterBehavior
 {
+    private BossHealthUI healthUI;
+
     protected override void Start()
     {
         base.Start();
+        OnSpawnEvent += UpdateHealthBar;
+        OnSpawnEvent += ActivateHealthBar;
         OnDieEvent += EraseBulletsOnDie;
+        OnDieEvent += DeactivateHealthBar;
+    }
+
+    public override void GetDamage(ProjectileData projData)
+    {
+        base.GetDamage(projData);
+        UpdateHealthBar();
     }
 
     public void EraseBulletsOnDie()
@@ -23,5 +34,20 @@ public class BossMonsterBehavior: MonsterBehavior
                     Destroy(projObj);
             }
         }
+    }
+
+    public void ActivateHealthBar()
+    {
+        StageManager.Instance.SetBossHealthUIActivation(true);
+    }
+
+    public void UpdateHealthBar()
+    {
+        StageManager.Instance.SetBossHealthUIGaugeFillAmount(currentLife / (float)data.life);
+    }
+
+    public void DeactivateHealthBar()
+    {
+        StageManager.Instance.SetBossHealthUIActivation(false);
     }
 }

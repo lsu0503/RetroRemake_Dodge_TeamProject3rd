@@ -2,9 +2,9 @@
 
 public class MonsterBehavior : CharacterBehavior
 {
-    private MonsterData data;
-    private int currentLife;
-    private bool isDie;
+    protected MonsterData data;
+    protected int currentLife;
+    protected bool isDie;
 
     private void Awake()
     {
@@ -22,7 +22,7 @@ public class MonsterBehavior : CharacterBehavior
         CallSpawnEvent();
     }
 
-    public void GetDamage(ProjectileData projData)
+    public virtual void GetDamage(ProjectileData projData)
     {
         currentLife -= projData.power;
 
