@@ -11,7 +11,7 @@ public class MonsterBehavior : CharacterBehavior
         data = new MonsterData();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         currentLife = data.life;
         isDie = false;
@@ -30,17 +30,6 @@ public class MonsterBehavior : CharacterBehavior
             CallDieEvent();
     }
 
-    public void BulletEraseOnDie()
-    {
-        foreach (GameObject projObj in GameObject.FindGameObjectsWithTag("Bullet"))
-        {
-            ProjectileData projData = projObj.GetComponent<ProjectileData>();
-
-            if (projData.type < 0)
-                projObj.SetActive(false);
-        }
-    }
-
     public virtual void OnDie()
     {
         isDie = true;
@@ -56,6 +45,8 @@ public class MonsterBehavior : CharacterBehavior
         {
             controller.enabled = false;
         }
+
+        isDie = false;
 
         Destroy(gameObject, 2.0f);
     }

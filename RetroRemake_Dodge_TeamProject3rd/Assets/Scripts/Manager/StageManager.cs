@@ -8,6 +8,7 @@ public class StageManager : MonoBehaviour
     public static StageManager Instance;
 
     public ObjectPool objectPool { get; private set; }
+    public MonsterDictionary monsterDict { get; private set; }
 
     [SerializeField] private GameObject SoloClearUi;
     [SerializeField] private GameObject MultiClearUi;
@@ -27,7 +28,8 @@ public class StageManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
 
-        objectPool = GameObject.FindObjectOfType<ObjectPool>();
+        objectPool = GetComponent<ObjectPool>();
+        monsterDict = GetComponent<MonsterDictionary>();
     }
 
     private void Start()

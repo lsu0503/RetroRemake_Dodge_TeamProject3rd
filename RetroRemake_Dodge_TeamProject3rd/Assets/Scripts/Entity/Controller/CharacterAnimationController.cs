@@ -1,18 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-public class PlayerAnimationController : AnimationController
+public class CharacterAnimationController : AnimationController
 {
-    private static readonly int isStop = Animator.StringToHash("isStop");
-    private static readonly int runningVelocity = Animator.StringToHash("runningVelocity");
-    private readonly float magnituteThreshold = 0.5f;
+    protected static readonly int isStop = Animator.StringToHash("isStop");
+    protected static readonly int runningVelocity = Animator.StringToHash("runningVelocity");
+    protected readonly float magnituteThreshold = 0.5f;
 
-    private void Start()
+    protected void Start()
     {
         controller.OnMoveEvent += Move;
     }
 
-    private void Move(Vector2 vector)
+    protected void Move(Vector2 vector)
     {
         if (vector.magnitude > magnituteThreshold)
         {
