@@ -77,7 +77,13 @@ public class PlayerCharacterBehavior : CharacterBehavior
             ProjectileData projData = projObj.GetComponent<ProjectileData>();
 
             if (projData.type < 0)
-                projObj.SetActive(false);
+            {
+                if (projData.isInPool)
+                    projObj.SetActive(false);
+
+                else
+                    Destroy(projObj);
+            }
         }
     }
 

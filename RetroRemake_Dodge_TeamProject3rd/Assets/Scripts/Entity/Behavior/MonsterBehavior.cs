@@ -11,7 +11,7 @@ public class MonsterBehavior : CharacterBehavior
         data = new MonsterData();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
         currentLife = data.life;
         isDie = false;
@@ -28,17 +28,6 @@ public class MonsterBehavior : CharacterBehavior
 
         if (currentLife < 0)
             CallDieEvent();
-    }
-
-    public void BulletEraseOnDie()
-    {
-        foreach (GameObject projObj in GameObject.FindGameObjectsWithTag("Bullet"))
-        {
-            ProjectileData projData = projObj.GetComponent<ProjectileData>();
-
-            if (projData.type < 0)
-                projObj.SetActive(false);
-        }
     }
 
     public virtual void OnDie()
