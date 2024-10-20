@@ -7,7 +7,7 @@ public class CharacterAnimationController : AnimationController
     protected static readonly int runningVelocity = Animator.StringToHash("runningVelocity");
     protected readonly float magnituteThreshold = 0.5f;
 
-    protected void Start()
+    protected virtual void Start()
     {
         controller.OnMoveEvent += Move;
     }

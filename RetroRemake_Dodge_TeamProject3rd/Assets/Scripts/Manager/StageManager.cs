@@ -13,9 +13,8 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject SoloClearUi;
     [SerializeField] private GameObject MultiClearUi;
     [SerializeField] private GameObject DefeatUi;
-    
-    PlayerData Player1;
-    PlayerData? Player2;
+
+    [SerializeField]private BossHealthUI bossHealthUI;
 
     public bool isCleared {  get; private set; }
     public bool GameOver { get; private set; } = false;
@@ -76,5 +75,15 @@ public class StageManager : MonoBehaviour
     public void DisplayDefeatUI() 
     {
         DefeatUi.SetActive(true);
+    }
+
+    public void SetBossHealthUIActivation(bool isActive)
+    {
+        bossHealthUI.SetActiveUI(isActive);
+    }
+
+    public void SetBossHealthUIGaugeFillAmount(float amount)
+    {
+        bossHealthUI.SetGaugeFill(amount);
     }
 }
