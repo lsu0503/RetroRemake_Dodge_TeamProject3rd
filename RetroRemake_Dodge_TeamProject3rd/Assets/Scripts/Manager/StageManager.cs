@@ -13,12 +13,8 @@ public class StageManager : MonoBehaviour
     [SerializeField] private GameObject SoloClearUi;
     [SerializeField] private GameObject MultiClearUi;
     [SerializeField] private GameObject DefeatUi;
-    
-    PlayerData player1;
-    PlayerData? player2;
 
-    BossMonsterData? boss;
-    BossHealthUI bossHealthUI;
+    [SerializeField]private BossHealthUI bossHealthUI;
 
     public bool isCleared {  get; private set; }
     public bool GameOver { get; private set; } = false;
