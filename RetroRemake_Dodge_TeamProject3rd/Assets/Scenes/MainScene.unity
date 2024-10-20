@@ -21328,7 +21328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   difficulty: 0
-  isMultiplay: 1
+  isMultiplay: 0
 --- !u!4 &1678895373
 Transform:
   m_ObjectHideFlags: 0

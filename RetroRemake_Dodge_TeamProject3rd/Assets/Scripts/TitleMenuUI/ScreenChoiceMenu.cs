@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScreenMode : MonoBehaviour
+public class ScreenChoiceMenu : MonoBehaviour
 {
     private RectTransform triangle; // 삼각형 이미지의 RectTransform
     public RectTransform windowedModeButtonRect; // 창모드 버튼의 RectTransform
     public RectTransform fullScreenButtonRect; // 전체화면 버튼의 RectTransform
     private float offset = 10f; // 버튼 위로 이동할 거리
 
-    public void Start()
+    public void PushWindowModeBtn() 
     {
         // 창모드 버튼 클릭 시 창모드로 전환 및 삼각형 위치 이동
         windowedModeButtonRect.GetComponent<Button>().onClick.AddListener(() =>
@@ -18,7 +18,10 @@ public class ScreenMode : MonoBehaviour
             SetTrianglePosition(windowedModeButtonRect);
             Screen.fullScreenMode = FullScreenMode.Windowed;
         });
+    }
 
+    public void PushFullScreenModeBtn()
+    {
         // 전체화면 버튼 클릭 시 전체화면으로 전환 및 삼각형 위치 이동
         fullScreenButtonRect.GetComponent<Button>().onClick.AddListener(() =>
         {
@@ -27,7 +30,6 @@ public class ScreenMode : MonoBehaviour
         });
     }
 
-    // 삼각형의 위치를 버튼 위치로 설정하고, y축으로 10만큼 떨어뜨리는 함수
     public void SetTrianglePosition(RectTransform buttonRect)
     {
         // 버튼의 위치를 가져오고 y축으로 offset만큼 추가

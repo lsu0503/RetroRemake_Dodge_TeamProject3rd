@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7806109945782038396}
   - component: {fileID: 591058850225800642}
   - component: {fileID: 4858322451721633049}
-  - component: {fileID: 1544177653160637278}
   m_Layer: 5
   m_Name: FullScreenModeBtn
   m_TagString: Untagged
@@ -122,32 +121,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8262182992921449689}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 299402548824078926}
+        m_TargetAssemblyTypeName: ScreenModeChoiceButton, Assembly-CSharp
+        m_MethodName: PushFullScreenModeBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1544177653160637278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475248026788685104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42507c6ce21b0f9499469a40db3b61db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windowedModeButtonRect: {fileID: 6679244352491279021}
-  fullScreenButtonRect: {fileID: 3136488362111995141}
 --- !u!1 &1510187682083801706
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,13 +364,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4211622369841272113}
+        m_TargetAssemblyTypeName: PlayBtnUi, Assembly-CSharp
+        m_MethodName: PushStartBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -547,13 +532,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 4211622369841272113}
+        m_TargetAssemblyTypeName: PlayBtnUi, Assembly-CSharp
+        m_MethodName: PushExitBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -780,7 +765,6 @@ GameObject:
   - component: {fileID: 3278827502685970235}
   - component: {fileID: 3930589106968407601}
   - component: {fileID: 2203963925981593709}
-  - component: {fileID: 3260594440974039150}
   m_Layer: 5
   m_Name: WindowModeBtn
   m_TagString: Untagged
@@ -890,10 +874,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3258017317497055996}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 299402548824078926}
+        m_TargetAssemblyTypeName: ScreenModeChoiceButton, Assembly-CSharp
+        m_MethodName: PushWindowModeBtn
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -902,20 +886,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3260594440974039150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3258017317497055996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42507c6ce21b0f9499469a40db3b61db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  windowedModeButtonRect: {fileID: 6679244352491279021}
-  fullScreenButtonRect: {fileID: 3136488362111995141}
 --- !u!1 &4045158320825640188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1741,7 @@ GameObject:
   - component: {fileID: 8604083251665212781}
   - component: {fileID: 6948760491071705925}
   - component: {fileID: 8247905968194870809}
+  - component: {fileID: 4211622369841272113}
   m_Layer: 5
   m_Name: PlayBtnUI
   m_TagString: Untagged
@@ -1790,8 +1761,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3680004656785636166}
   - {fileID: 1517026587419004159}
+  - {fileID: 3680004656785636166}
   m_Father: {fileID: 3026755979194783842}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1862,6 +1833,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &4211622369841272113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480202082718141982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b00cbc8877daa547a16b7347a0204a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectModeUI: {fileID: 0}
+  TitleMenuUI: {fileID: 7672891813812256569}
 --- !u!1 &7672891813812256569
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,8 +2071,9 @@ GameObject:
   - component: {fileID: 533545427933002004}
   - component: {fileID: 413016358014989108}
   - component: {fileID: 4787888067278212567}
+  - component: {fileID: 299402548824078926}
   m_Layer: 5
-  m_Name: ScreenModeChoiceUI
+  m_Name: ScreenChoiceUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2178,6 +2164,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &299402548824078926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8262182992921449689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42507c6ce21b0f9499469a40db3b61db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  windowedModeButtonRect: {fileID: 6679244352491279021}
+  fullScreenButtonRect: {fileID: 3136488362111995141}
 --- !u!1 &8753866315472803200
 GameObject:
   m_ObjectHideFlags: 0
