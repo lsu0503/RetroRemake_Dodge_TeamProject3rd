@@ -10853,6 +10853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a70080e6feb904d94cf06d2e0b9987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiHandler: {fileID: 35470306}
   playerNum: 1
 --- !u!114 &606170648
 MonoBehaviour:
@@ -16140,6 +16141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a70080e6feb904d94cf06d2e0b9987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiHandler: {fileID: 1763371341}
   playerNum: 0
 --- !u!114 &1298821225
 MonoBehaviour:
