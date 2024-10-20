@@ -22,11 +22,11 @@ public class Item : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerData playerData = collision.rigidbody.GetComponent<PlayerData>();
+            PlayerData playerData = collision.gameObject.GetComponent<PlayerData>();
             ApplyItem(playerData);
         }
     }
