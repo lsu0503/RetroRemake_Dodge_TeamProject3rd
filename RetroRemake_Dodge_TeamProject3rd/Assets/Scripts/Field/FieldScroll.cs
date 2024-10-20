@@ -14,6 +14,7 @@ public class FieldScroll : MonoBehaviour
 
     [SerializeField] private GameObject[] fields;
 
+    
     private void Update()
     {
         ScrollField();
