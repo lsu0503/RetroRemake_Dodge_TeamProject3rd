@@ -1,58 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
-
 
 public class ResultScoreUi : MonoBehaviour
 {
-    public int ResultLifeScore { get; private set; }
-    public int ResultBombScore { get; private set; }
+    private int totalScore;
+    private int remainLife;
+    private int remainBomb;
 
-    PlayerData playerData;
-    [SerializeField] private TextMeshProUGUI p1ResultLifeScoreText;
-    [SerializeField] private TextMeshProUGUI p1ResultBombScoreText;
-    [SerializeField] private TextMeshProUGUI p2ResultLifeScoreText;
-    [SerializeField] private TextMeshProUGUI p2ResultBombScoreText;
+    [SerializeField] private TextMeshProUGUI totalScoreText;
 
-
-    public void SetResultPlayer1ScoreUi()
+    private void Awake()
     {
-        p1ResultLifeScoreText.text = $"x {ResultLifeScore}";
-        p1ResultBombScoreText.text = $"x {ResultBombScore}";
-
-
-    }
-    public void SetResultPlayer2ScoreUi()
-    {
-        p2ResultLifeScoreText.text = $"x {ResultLifeScore}";
-        p2ResultBombScoreText.text = $"x {ResultBombScore}";
-    }
-
-    public void Specificityofhit(int playerNum)
-    {
-        int i;
-        int j = 3; // 아직 몬스터 UI 만들기 전 임의적으로 선언
-
-        for (i = 0; i < ScoreManager.instance.BDIList.Count; i++)
-       {
-            if(playerNum == 0)
-            {
-
-            }
-            else if (playerNum == 1)
-            {
-
-            }
-       }
-        for(i = ScoreManager.instance.BDIList.Count; i < j; i++)
-        {
-            
-        }
 
     }
 
+    private void Update()
+    {
+        totalScoreText.text = $"{totalScore}";
+    }
 
+    //private void Specificityofhit(int playerNum)
+    //{
+    //    int i;
+    //    int j = 3;
+
+    //    for (i = 0; i < ScoreManager.instance.BDIList.Count; i++)
+    //    {
+    //        if (playerNum == 0)
+    //        {
+                
+    //        }
+    //        else
+    //        {
+
+    //        }
+    //    }
+    //    for (i = ScoreManager.instance.BDIList.Count; i < j; i++)
+    //    {
+
+    //    }
+    //}
+
+    private void CalculateTotalScore(int playerNum)
+    {
+        //totalScore = ScoreManager.instance.player1Score + ( remainLife * 1000000 ) + ( remainBomb * 100000 ) + ( 보스1 대미지 * 보스1 점수 ) + ( 보스2 대미지 * 보스2 점수 ) + ( 보스3 대미지 * 보스3 점수 )
+    }
 }
