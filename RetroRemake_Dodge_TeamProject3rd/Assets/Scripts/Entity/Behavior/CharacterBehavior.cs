@@ -3,19 +3,19 @@ using UnityEngine;
 
 public class CharacterBehavior : MonoBehaviour
 {
-    public event Action<int> OnHitEvent;
+    public event Action<ProjectileData> OnHitEvent;
     public event Action OnDieEvent;
     public event Action OnSpawnEvent;
 
-    public virtual bool OnHit(int damage)
+    public virtual bool OnHit(ProjectileData projData)
     {
-        CallHitEvent(damage);
+        CallHitEvent(projData);
         return true;
     }
 
-    public void CallHitEvent(int damage)
+    public void CallHitEvent(ProjectileData projData)
     {
-        OnHitEvent?.Invoke(damage);
+        OnHitEvent?.Invoke(projData);
     }
 
     public void CallDieEvent()

@@ -16,6 +16,7 @@ public class PlayerCharacterBehavior : CharacterBehavior
     private void Start()
     {
         OnDieEvent += BulletEraseOnDie;
+        OnDieEvent += ActiveFalseOnDie;
         OnDieEvent += LifeOver;
         OnSpawnEvent += OnSpwan;
     }
@@ -31,11 +32,11 @@ public class PlayerCharacterBehavior : CharacterBehavior
         }
     }
 
-    public override bool OnHit(int damage)
+    public override bool OnHit(ProjectileData projData)
     {
         if (recoverTimeCurrent >= recoverTimeMax)
         {
-            CallHitEvent(damage);
+            CallHitEvent(projData);
             data.LoseLife();
             Invoke("CallDieEvent", 2.5f);
             Invoke("CallSpawnEvent", 5.0f);
@@ -46,7 +47,13 @@ public class PlayerCharacterBehavior : CharacterBehavior
             return false;
     }
 
-    private void BulletEraseOnDie()
+    
+    public void ActiveFalseOnDie()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public void BulletEraseOnDie()
     {
         Collider2D[] colls = Physics2D.OverlapCircleAll(transform.position, 100.0f);
         foreach(Collider2D coll in colls)
@@ -63,13 +70,13 @@ public class PlayerCharacterBehavior : CharacterBehavior
         }
     }
 
-    private void LifeOver()
+    public void LifeOver()
     {
         if (!data.isAlive)
             gameObject.SetActive(false);
     }
 
-    private void OnSpwan()
+    public void OnSpwan()
     {
         if (data.playerNum == 0)
             transform.position = new Vector3(-14.5f, 2.5f, 0.0f);
@@ -77,5 +84,7 @@ public class PlayerCharacterBehavior : CharacterBehavior
             transform.position = new Vector3(-14.5f, -2.5f, 0.0f);
 
         recoverTimeCurrent = -2.5f;
+
+        gameObject.SetActive(true);
     }
 }

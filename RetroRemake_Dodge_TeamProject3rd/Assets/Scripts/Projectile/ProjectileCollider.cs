@@ -26,6 +26,9 @@ public class ProjectileCollider : MonoBehaviour
     public void TargetHit(Collider2D collision)
     {
         if (collision.gameObject.CompareTag(data.targetTag))
+        {
+            collision.gameObject.GetComponent<CharacterBehavior>().OnHit(data);
             gameObject.SetActive(false);
+        }
     }
 }
