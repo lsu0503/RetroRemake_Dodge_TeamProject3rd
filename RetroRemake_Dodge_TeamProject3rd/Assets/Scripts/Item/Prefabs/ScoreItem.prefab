@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5423876005632182142}
   - component: {fileID: 8987817873741102391}
   - component: {fileID: 5430969541325789935}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ScoreItem
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
