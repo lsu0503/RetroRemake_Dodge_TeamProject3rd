@@ -7,24 +7,27 @@ public class ItemCollider : MonoBehaviour
     {
         itemData = GetComponent<ItemData>();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        ItemManager itemManager = GetComponent<ItemManager>();
+        PlayerData playerData = collision.rigidbody.GetComponent<PlayerData>();
+
         if (collision.gameObject.CompareTag("Player"))
         {
             if (itemData.itemType == 0)
             {
-                ItemManager itemManager = GetComponent<ItemManager>();
-                itemManager.ItemLife();
+                itemManager.ItemLife(playerData);
             }
             else if (itemData.itemType == 1)
             {
-                ItemManager itemManager = GetComponent<ItemManager>();
-                itemManager.ItemBomb();
+                itemManager.ItemBomb(playerData);
             }
             else 
             {
-                ItemManager itemManager = GetComponent<ItemManager>();
-                itemManager.ItemScore();
+                ScoreManager scoreManager = collision.rigidbody.GetComponent<ScoreManager>();
+                int pnum = playerData.playerNum;
+                itemManager.ItemScore(scoreManager,pnum);
             }
         }
     }

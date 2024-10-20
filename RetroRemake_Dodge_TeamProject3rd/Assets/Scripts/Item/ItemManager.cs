@@ -2,22 +2,16 @@
 
 public class ItemManager : MonoBehaviour
 {
-    private ItemData itemData;
-
-    private void Awake()
+    public void ItemLife(PlayerData playerData)
     {
-        itemData = GetComponent<ItemData>();
+        playerData.GetLife();
     }
-    public void ItemLife()
+    public void ItemBomb(PlayerData playerData)
     {
-        
+        playerData.GetBomg();
     }
-    public void ItemBomb()
+    public void ItemScore(ScoreManager scoreManager,int playerNum)
     {
-        
-    }
-    public void ItemScore()
-    {
-
+        scoreManager.GainScore(playerNum, 1000);
     }
 }
