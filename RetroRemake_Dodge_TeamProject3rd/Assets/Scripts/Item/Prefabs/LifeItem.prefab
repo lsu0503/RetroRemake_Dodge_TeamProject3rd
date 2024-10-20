@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8027619486519379360}
   - component: {fileID: 7369694848639731595}
   - component: {fileID: 1606925399075562572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LifeItem
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
