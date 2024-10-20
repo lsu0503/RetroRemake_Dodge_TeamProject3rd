@@ -36,7 +36,7 @@ public class ResultScoreUi : MonoBehaviour
         int i;
         int j = 3; // 아직 몬스터 UI 만들기 전 임의적으로 선언
 
-        for (i = 0; i < ScoreManager.instance.DamageRatio.Count; i++)
+        for (i = 0; i < ScoreManager.instance.BDIList.Count; i++)
        {
             if(playerNum == 0)
             {
@@ -47,7 +47,7 @@ public class ResultScoreUi : MonoBehaviour
 
             }
        }
-        for(i = ScoreManager.instance.DamageRatio.Count; i < j; i++)
+        for(i = ScoreManager.instance.BDIList.Count; i < j; i++)
         {
             
         }

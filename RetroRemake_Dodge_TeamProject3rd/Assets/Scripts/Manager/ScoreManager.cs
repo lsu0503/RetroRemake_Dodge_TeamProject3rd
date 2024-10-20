@@ -2,6 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct BossDefeatInformation
+{
+    public Sprite bossImg;
+    public int totalScore;
+    public float[] damageRatio;
+
+    public BossDefeatInformation(Sprite _bossImg, int _totalScore, int[] _damageAmount)
+    {
+        bossImg = _bossImg;
+        totalScore = _totalScore;
+        
+        int totalDamage = 0;
+        List<float> damageRatioList = new List<float>();
+        int i;
+        for (i = 0; i < _damageAmount.Length; i++)
+            totalDamage += _damageAmount[i];
+
+        for(i = 0; i < _damageAmount.Length; i++)
+            damageRatioList.Add(_damageAmount[i]/totalDamage);
+
+        damageRatio = damageRatioList.ToArray();
+    }
+}
+
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
@@ -9,9 +33,7 @@ public class ScoreManager : MonoBehaviour
     public int player1Score { get; private set; }
     public int player2Score { get; private set; }
     
-
-    public List<float[]> DamageRatio = new List<float[]>();  
-
+    public List<BossDefeatInformation> BDIList = new List<BossDefeatInformation>();  
 
     private void Awake()
     {
@@ -19,8 +41,8 @@ public class ScoreManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            
         }
+
         else if (instance != this) 
         {
             Destroy(gameObject);
@@ -45,11 +67,10 @@ public class ScoreManager : MonoBehaviour
 
         } 
     }
-    public void AddDamage()
+
+    public void AddBossDefeatInformation(Sprite _img, int _totalScore, int[] _damageList)
     {
-        
+        BossDefeatInformation _b_d_i = new BossDefeatInformation(_img, _totalScore, _damageList);
+        BDIList.Add(_b_d_i);
     }
-    
-        
-    
 }
