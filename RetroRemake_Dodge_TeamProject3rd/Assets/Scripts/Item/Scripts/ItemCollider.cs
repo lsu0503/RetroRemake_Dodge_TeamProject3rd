@@ -12,7 +12,6 @@ public class ItemCollider : MonoBehaviour
     {
         ItemManager itemManager = GetComponent<ItemManager>();
         PlayerData playerData = collision.rigidbody.GetComponent<PlayerData>();
-
         if (collision.gameObject.CompareTag("Player"))
         {
             if (itemData.itemType == 0)
