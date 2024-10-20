@@ -6,11 +6,11 @@ public class BossMonsterBehavior: MonsterBehavior
 
     protected override void Start()
     {
-        base.Start();
         OnSpawnEvent += UpdateHealthBar;
         OnSpawnEvent += ActivateHealthBar;
         OnDieEvent += EraseBulletsOnDie;
         OnDieEvent += DeactivateHealthBar;
+        base.Start();
     }
 
     public override void GetDamage(ProjectileData projData)
