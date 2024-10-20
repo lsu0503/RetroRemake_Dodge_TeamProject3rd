@@ -6,9 +6,9 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    public List<AudioClip> bgmClips;
-    public float bgmVolume;
-    public Slider bgmVolumeSlider;
+    [SerializeField]private List<AudioClip> bgmClips;
+    [SerializeField] private float bgmVolume;
+    [SerializeField] private Slider bgmVolumeSlider;
     AudioSource bgmPlayer;
 
     private void Awake()
@@ -32,7 +32,7 @@ public class SoundManager : MonoBehaviour
         bgmVolumeSlider.onValueChanged.AddListener(BgmVolumeSlider);
     }
 
-    void BackgroundMusic()
+    private void BackgroundMusic()
     {
         GameObject bgmObject = new GameObject("BgmPlayer");
         bgmObject.transform.parent = transform;
