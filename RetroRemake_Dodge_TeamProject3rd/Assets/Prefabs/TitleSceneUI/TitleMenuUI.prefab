@@ -121,8 +121,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ScreenChoiceMenu, Assembly-CSharp
+      - m_Target: {fileID: 7772722108350727163}
+        m_TargetAssemblyTypeName: ScreenModeManager, Assembly-CSharp
         m_MethodName: SetFullscreenMode
         m_Mode: 1
         m_Arguments:
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ScreenChoiceMenu, Assembly-CSharp
+      - m_Target: {fileID: 7772722108350727163}
+        m_TargetAssemblyTypeName: ScreenModeManager, Assembly-CSharp
         m_MethodName: SetWindowMode
         m_Mode: 1
         m_Arguments:
@@ -2472,10 +2472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42507c6ce21b0f9499469a40db3b61db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windowModeBtn: {fileID: 0}
-  fullscreenModeBtn: {fileID: 0}
-  windowModeIndicator: {fileID: 0}
-  fullscreenModeIndicator: {fileID: 0}
+  windowModeIndicator: {fileID: 2404227376160561319}
+  fullscreenModeIndicator: {fileID: 4749465325463936796}
 --- !u!1 &8753866315472803200
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,6 @@ public class ScreenModeManager : MonoBehaviour
 
     private void Start()
     {
-        // 초기 상태를 풀스크린 모드로 설정
         UpdateIndicators();
     }
 
@@ -48,13 +47,13 @@ public class ScreenModeManager : MonoBehaviour
     {
         if (Screen.fullScreen)
         {
-            windowModeIndicator.SetActive(false);  // 창 모드 표시 비활성화
-            fullscreenModeIndicator.SetActive(true); // 풀스크린 모드 표시 활성화
+            windowModeIndicator.SetActive(false);  
+            fullscreenModeIndicator.SetActive(true); 
         }
         else
         {
-            windowModeIndicator.SetActive(true);  // 창 모드 표시 활성화
-            fullscreenModeIndicator.SetActive(false); // 풀스크린 모드 표시 비활성화
+            windowModeIndicator.SetActive(true);  
+            fullscreenModeIndicator.SetActive(false); 
         }
     }
 }

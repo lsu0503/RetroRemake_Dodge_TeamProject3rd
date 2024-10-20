@@ -6,10 +6,9 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;
 
-    [SerializeField]private List<AudioClip> bgmClips;
-    [SerializeField] private float bgmVolume;
+    [SerializeField]private AudioClip[] bgmClips;
     [SerializeField] private Slider bgmVolumeSlider;
-    AudioSource bgmPlayer;
+    private AudioSource bgmPlayer;
 
     private void Awake()
     {
@@ -17,33 +16,28 @@ public class SoundManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject); 
-            BackgroundMusic();
         }
         else if (Instance != this)
         {
             Destroy(gameObject);
         }
+
+        bgmPlayer = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
         PlayBgm(0);
-        bgmVolumeSlider.value = bgmVolume;
         bgmVolumeSlider.onValueChanged.AddListener(BgmVolumeSlider);
     }
-
-    private void BackgroundMusic()
+    private void LoadBgmClips()
     {
-        GameObject bgmObject = new GameObject("BgmPlayer");
-        bgmObject.transform.parent = transform;
-        bgmPlayer = bgmObject.AddComponent<AudioSource>();
-        bgmPlayer.loop = true;
-        bgmPlayer.volume = bgmVolume;
+        bgmClips = Resources.LoadAll<AudioClip>("Bgm");
     }
 
     public void PlayBgm(int index)
     {
-        if (index >= 0 && index < bgmClips.Count)
+        if (index >= 0 && index < bgmClips.Length)
         {
             bgmPlayer.clip = bgmClips[index];
             bgmPlayer.Play();
@@ -57,6 +51,5 @@ public class SoundManager : MonoBehaviour
     public void BgmVolumeSlider(float value)
     {
         bgmPlayer.volume = value;
-        bgmVolume = value;
     }
 }
