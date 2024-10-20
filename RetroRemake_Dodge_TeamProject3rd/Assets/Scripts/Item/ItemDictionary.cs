@@ -11,12 +11,10 @@ public class ItemDictionary : MonoBehaviour
     public void Awake()
     {
         itemDict = new Dictionary<int, GameObject>();
-        foreach (var item in items)
+
+        for (int i = 0; i < items.Count; i++)
         {
-            for (int i = 0; i < items.Count; i++)
-            {
-                itemDict.Add(i, item);
-            }
+            itemDict.Add(i, items[i]);
         }
     }
 
