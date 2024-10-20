@@ -22,9 +22,11 @@ public class ProjectileElimination : MonoBehaviour
         // 따라서, 발사 주체의 확인을 할 필요 없이 탄환 제거만 하면 된다.
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            // 개발 상황에 맞춰서 두 기능 중 하나 만 남길 것.
-            //Destroy(collision.gameObject);
-            collision.gameObject.SetActive(false);
+            if (collision.gameObject.GetComponent<ProjectileData>().isInPool)
+                gameObject.SetActive(false);
+
+            else
+                Destroy(gameObject);
         }
     }
 }
