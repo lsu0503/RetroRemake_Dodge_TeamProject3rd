@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    [SerializeField] private PlayerInfoUIHandler uiHandler;
+
     public int playerNum;
     public int life { get; private set; }
     public int bomb { get; private set; }
@@ -53,6 +55,7 @@ public class PlayerData : MonoBehaviour
         if(life < 5)
         {
             life++;
+            uiHandler.UpdatePlayerLife();
             return true;
         }
         else
@@ -64,6 +67,7 @@ public class PlayerData : MonoBehaviour
         if(bomb < 5)
         {
             bomb++;
+            uiHandler.UpdatePlayerBomb();
             return true;
         }
         else
