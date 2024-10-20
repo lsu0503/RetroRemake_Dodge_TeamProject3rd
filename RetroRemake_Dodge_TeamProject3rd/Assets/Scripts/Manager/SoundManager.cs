@@ -1,78 +1,62 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager instance;
+    public static SoundManager Instance;
 
-    [Header("#BGM")]
-    public AudioClip bgmClip;
+    public List<AudioClip> bgmClips;
     public float bgmVolume;
     public Slider bgmVolumeSlider;
     AudioSource bgmPlayer;
 
-    [Header("#SFX")]
-    public AudioClip[] sfxClips;
-    public float sfxVolume;
-    public int channels;
-    AudioSource[] sfxPlayers;
-    int channelIndex;
-    public Slider SfxVolumeSlider;
-
     private void Awake()
     {
-        instance = this;
-        Init();
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+            BackgroundMusic();
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
-        PlayBgm(true);
+        PlayBgm(0);
         bgmVolumeSlider.value = bgmVolume;
-        bgmVolumeSlider.onValueChanged.AddListener(OnBgmVolumeSliderChanged);
+        bgmVolumeSlider.onValueChanged.AddListener(BgmVolumeSlider);
     }
 
-    void Init() 
+    void BackgroundMusic()
     {
         GameObject bgmObject = new GameObject("BgmPlayer");
         bgmObject.transform.parent = transform;
         bgmPlayer = bgmObject.AddComponent<AudioSource>();
         bgmPlayer.loop = true;
         bgmPlayer.volume = bgmVolume;
-        bgmPlayer.clip = bgmClip;
-
-        GameObject sfxObject = new GameObject("SfxPlayer");
-        sfxObject.transform.parent = transform;
-        sfxPlayers = new AudioSource[channels];
-
-        for (int index = 0; index < sfxPlayers.Length; index++)
-        {
-            sfxPlayers[index] = sfxObject.AddComponent<AudioSource>();
-            sfxPlayers[index].playOnAwake = false;
-            sfxPlayers[index].volume = sfxVolume;
-        }
-
     }
 
-    public void PlayBgm(bool isPlay) 
-    
+    public void PlayBgm(int index)
     {
-        if (isPlay) 
+        if (index >= 0 && index < bgmClips.Count)
         {
+            bgmPlayer.clip = bgmClips[index];
             bgmPlayer.Play();
         }
         else
         {
             bgmPlayer.Stop();
         }
-
     }
-    public void OnBgmVolumeSliderChanged(float value)
+
+    public void BgmVolumeSlider(float value)
     {
         bgmPlayer.volume = value;
-        bgmVolume = value; 
+        bgmVolume = value;
     }
-
 }

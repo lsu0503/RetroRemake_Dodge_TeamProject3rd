@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &232784711 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+  m_PrefabInstance: {fileID: 1293724022}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &260490584
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,15 +590,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectModeUI: {fileID: 2062550486}
   TitleMenuUI: {fileID: 1831175035}
---- !u!114 &839038444 stripped
+--- !u!1 &842040471 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2404227376160561319, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+  m_PrefabInstance: {fileID: 1293724022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &868757867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4749465325463936796, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+  m_PrefabInstance: {fileID: 1293724022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &944106051 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4211622369841272113, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
   m_PrefabInstance: {fileID: 1293724022}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b00cbc8877daa547a16b7347a0204a2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1078080701
@@ -809,17 +830,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1237825693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 299402548824078926, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-  m_PrefabInstance: {fileID: 1293724022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42507c6ce21b0f9499469a40db3b61db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1284943112
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +972,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299402548824078926, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: windowModeBtn
+      value: 
+      objectReference: {fileID: 944106051}
+    - target: {fileID: 299402548824078926, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: fullscreenModeBtn
+      value: 
+      objectReference: {fileID: 232784711}
+    - target: {fileID: 299402548824078926, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: windowModeIndicator
+      value: 
+      objectReference: {fileID: 842040471}
+    - target: {fileID: 299402548824078926, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: fullscreenModeIndicator
+      value: 
+      objectReference: {fileID: 868757867}
     - target: {fileID: 606755046274411321, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -969,50 +995,34 @@ PrefabInstance:
     - target: {fileID: 810336036770696921, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 839038444}
-    - target: {fileID: 810336036770696921, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushStartBtn
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1353412936}
     - target: {fileID: 810336036770696921, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayBtnUi, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 810336036770696921, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TitleMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2120279164733707840, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 839038444}
-    - target: {fileID: 2120279164733707840, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushExitBtn
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1353412936}
     - target: {fileID: 2120279164733707840, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayBtnUi, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2120279164733707840, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: TitleMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetWindowMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScreenChoiceMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404227376160561319, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_Name
+      value: windowtriangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 2404227376160561319, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1237825693}
-    - target: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushWindowModeBtn
-      objectReference: {fileID: 0}
-    - target: {fileID: 2203963925981593709, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScreenModeChoiceButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2614141096062701089, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1062,41 +1072,33 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4211622369841272113, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: SelectModeUI
-      value: 
-      objectReference: {fileID: 2062550486}
-    - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1237825693}
+    - target: {fileID: 4749465325463936796, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_Name
+      value: FullScreenTriangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749465325463936796, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PushFullScreenModeBtn
+      value: SetFullscreenMode
       objectReference: {fileID: 0}
     - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScreenModeChoiceButton, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: ScreenChoiceMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5703716408963886187, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366684086367681225, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: SelectModeUI
+      value: 
+      objectReference: {fileID: 2062550486}
     - target: {fileID: 7672891813812256569, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_Name
       value: TitleMenuUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7672891813812256569, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8262182992921449689, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-      propertyPath: m_Name
-      value: ScreenChoiceUI
       objectReference: {fileID: 0}
     - target: {fileID: 9194382613004261862, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_Color.b
@@ -1115,15 +1117,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
---- !u!114 &1471772759 stripped
+--- !u!114 &1353412936 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5369266867555738687, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7366684086367681225, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
   m_PrefabInstance: {fileID: 1293724022}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b00cbc8877daa547a16b7347a0204a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1550993792
@@ -1260,17 +1262,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550993792}
   m_CullTransparentMesh: 1
---- !u!114 &1641974548 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4960037380757753009, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
-  m_PrefabInstance: {fileID: 1293724022}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1732301942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,13 +1383,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2ab6915b39dcc418b5864e1939af49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 8300000, guid: ae15d8f4e005213438ef9a239d03c166, type: 3}
-  bgmVolume: 0.5
-  bgmVolumeSlider: {fileID: 1641974548}
-  sfxClips: []
-  sfxVolume: 0
-  channels: 0
-  SfxVolumeSlider: {fileID: 1471772759}
+  sounds:
+  - name: TitleSound
+    clip: {fileID: 8300000, guid: ae15d8f4e005213438ef9a239d03c166, type: 3}
+    source: {fileID: 0}
+  - name: MainSound
+    clip: {fileID: 8300000, guid: b1d0e4d2fa64b004e8586edb6acb9d46, type: 3}
+    source: {fileID: 0}
+  - name: BossSound
+    clip: {fileID: 8300000, guid: 4a5f6e4787f054b4c959f0399bde4f09, type: 3}
+    source: {fileID: 0}
 --- !u!4 &1752085588
 Transform:
   m_ObjectHideFlags: 0
