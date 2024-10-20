@@ -59,7 +59,7 @@ public class PlayerData : MonoBehaviour
             return false;
     }
 
-    public bool GetBomg()
+    public bool GetBomb()
     {
         if(bomb < 5)
         {
