@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 943111780695211022}
   - component: {fileID: 4479217336441239235}
   m_Layer: 5
-  m_Name: TotalscoreText
+  m_Name: Totalscore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 836406433504976933}
   - component: {fileID: 5595633853751975038}
   m_Layer: 5
-  m_Name: TotalscoreNameText
+  m_Name: TotalscoreTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -175, y: 0}
-  m_SizeDelta: {x: 350, y: 35}
+  m_AnchoredPosition: {x: -165, y: 0}
+  m_SizeDelta: {x: 300, y: 35}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &836406433504976933
 CanvasRenderer:
