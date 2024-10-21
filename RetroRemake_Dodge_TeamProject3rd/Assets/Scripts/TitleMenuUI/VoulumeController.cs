@@ -18,10 +18,10 @@ public class VoulumeController : MonoBehaviour
     void Start()
     {
         // PlayerPrefs에 Volume 값이 저장되어 있을 경우,
-        if (PlayerPrefs.HasKey("Volume"))
+        if (PlayerPrefs.HasKey("BGMVolume"))
         {
             // Slider의 값을 저장해 놓은 값으로 변경.
-            BGMSlider.value = PlayerPrefs.GetFloat("Volume");            
+            BGMSlider.value = PlayerPrefs.GetFloat("BGMVolume");            
         }
         else
         {

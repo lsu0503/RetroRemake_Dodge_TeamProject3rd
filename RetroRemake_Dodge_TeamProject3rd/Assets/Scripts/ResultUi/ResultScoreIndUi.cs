@@ -25,6 +25,7 @@ public class ResultScoreIndUi : MonoBehaviour
     {
         CalculateBossScore(playerNum);
         CalculateTotalScore(playerNum);
+        InstanciateBossResultInd();
     }
 
     private void CalculateBossScore(int playerNum)
