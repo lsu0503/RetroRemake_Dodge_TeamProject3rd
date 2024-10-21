@@ -13,7 +13,7 @@ public class BossResultUI : MonoBehaviour
     public void UpdateUI(BossDefeatInformation info, int playerNum)
     {
         bossImg.sprite = info.bossImg;
-        ratioTxt.text = string.Format($"{info.damageRatio[playerNum] : N2}%");
+        ratioTxt.text = string.Format($"{info.damageRatio[playerNum]:p2}%");
         totalScoreTxt.text = info.totalScore.ToString();
     }
 }
