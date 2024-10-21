@@ -30,7 +30,7 @@ public class MonsterBehavior : CharacterBehavior
     {
         currentLife -= projData.power;
 
-        if (currentLife < 0)
+        if (currentLife < 0 && !isDie)
             CallDieEvent();
     }
 
@@ -49,8 +49,6 @@ public class MonsterBehavior : CharacterBehavior
         {
             controller.enabled = false;
         }
-
-        isDie = false;
 
         Destroy(gameObject);
     }

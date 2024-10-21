@@ -43,6 +43,8 @@ public class MonsterGenerator : MonoBehaviour
         generateTriggerCount = 0;
         level = 0;
         isLegionSpawned = false;
+
+        SoundManager.Instance.PlayBgm(1);
     }
 
     private void FixedUpdate()
@@ -107,6 +109,7 @@ public class MonsterGenerator : MonoBehaviour
 
     private void spawnLegion()
     {
+        SoundManager.Instance.PlayBgm(2);
         for(int i = 0; i < minionDictAmount; i++)
         {
             GameObject spawnObj = monsterDict.InstanciateMonster(i);
