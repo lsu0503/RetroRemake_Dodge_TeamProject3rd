@@ -1,17 +1,21 @@
 ﻿using UnityEngine;
 
-public class MonsterAnimationController : CharacterAnimationController
+public class MonsterAnimationController : AnimationController
 {
-    private static readonly int isAttack = Animator.StringToHash("isAttack");
+    protected static readonly int velocity = Animator.StringToHash("velocity");
 
-    protected override void Start()
+    protected virtual void Start()
     {
-        base.Start();
-        controller.OnAttackEvent += Attack;
+        controller.OnMoveEvent += Move;
     }
 
-    private void Attack()
+    protected virtual void Move(Vector2 vector)
     {
-        animator.SetTrigger(isAttack);
+        if (vector.x < 0)
+            animator.SetFloat(velocity, 1.0f);
+        else if (vector.x > 0)
+            animator.SetFloat(velocity, -2.5f);
+        else
+            animator.SetFloat(velocity, 0.5f);
     }
 }
