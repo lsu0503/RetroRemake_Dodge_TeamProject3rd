@@ -28,7 +28,12 @@ public class ProjectileCollider : MonoBehaviour
         if (collision.gameObject.CompareTag(data.targetTag))
         {
             collision.gameObject.GetComponent<CharacterBehavior>().OnHit(data);
-            gameObject.SetActive(false);
+
+            if(data.isInPool)
+                gameObject.SetActive(false);
+
+            else
+                Destroy(gameObject);
         }
     }
 }

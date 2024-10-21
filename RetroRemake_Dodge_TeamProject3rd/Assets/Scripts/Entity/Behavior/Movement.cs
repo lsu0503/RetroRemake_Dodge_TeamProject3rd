@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     private Controller controller;
     private Rigidbody2D rigid;
+    [SerializeField] private bool isPlayer;
 
     [SerializeField] float velocity = 8.0f;
     
@@ -37,8 +38,12 @@ public class Movement : MonoBehaviour
         Vector2 movement = direction * velocity;
 
         rigid.velocity = movement;
-        float posY = Mathf.Clamp(transform.position.y, -5.5f, 6.0f);
-        float posX = Mathf.Clamp(transform.position.x, -13.5f, 13.5f);
-        transform.position = new Vector2(posX, posY);
+        if (isPlayer)
+        {
+            float posY = Mathf.Clamp(transform.position.y, -5.5f, 6.0f);
+            float posX = Mathf.Clamp(transform.position.x, -13.5f, 13.5f);
+
+            transform.position = new Vector2(posX, posY);
+        }
     }
 }
