@@ -10993,6 +10993,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f177f3d7341eed244b20794be018efde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Score: 0
+  player2Score: 0
 --- !u!4 &599046016
 Transform:
   m_ObjectHideFlags: 0
@@ -21801,7 +21803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277375e09d3c5f649ac7e510468bc545, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 2
+  difficulty: 0
   isMultiplay: 0
 --- !u!4 &1678895373
 Transform:
