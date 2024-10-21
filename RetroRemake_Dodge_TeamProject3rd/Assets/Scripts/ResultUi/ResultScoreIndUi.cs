@@ -21,7 +21,7 @@ public class ResultScoreIndUi : MonoBehaviour
 
     [SerializeField] private PlayerData playerData;
 
-    private void Start()
+    private void OnEnable()
     {
         CalculateBossScore(playerNum);
         CalculateTotalScore(playerNum);
