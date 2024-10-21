@@ -85,7 +85,7 @@ public class StageManager : MonoBehaviour
             GameOver(false);
     }
 
-    private void GameOver(bool isCleared)
+    public void GameOver(bool isCleared)
     {
         FieldScroll.SetScrollStop();
         Time.timeScale = 0.0f;
