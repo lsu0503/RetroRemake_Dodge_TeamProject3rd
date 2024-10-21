@@ -143,6 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022341714216249339}
+  - component: {fileID: 4254025006351593975}
   m_Layer: 5
   m_Name: ClearUi_Multi
   m_TagString: Untagged
@@ -174,6 +175,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4254025006351593975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811643507513220687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa663dce70eb02f49b9b242c4010db30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7057793267301482050
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +457,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022341714216249339}
     m_Modifications:
+    - target: {fileID: 2120279164733707840, guid: c81206971f7a1754a8710683733ae394, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4254025006351593975}
+    - target: {fileID: 2120279164733707840, guid: c81206971f7a1754a8710683733ae394, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetryBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120279164733707840, guid: c81206971f7a1754a8710683733ae394, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResultUiButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120279164733707840, guid: c81206971f7a1754a8710683733ae394, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3680004656785636166, guid: c81206971f7a1754a8710683733ae394, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -546,6 +575,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1022341714216249339}
     m_Modifications:
+    - target: {fileID: 2120279164733707840, guid: b79abda991e29d64ca07f37a4413563a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4254025006351593975}
+    - target: {fileID: 2120279164733707840, guid: b79abda991e29d64ca07f37a4413563a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnTitileBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120279164733707840, guid: b79abda991e29d64ca07f37a4413563a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResultUiButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2120279164733707840, guid: b79abda991e29d64ca07f37a4413563a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3680004656785636166, guid: b79abda991e29d64ca07f37a4413563a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
