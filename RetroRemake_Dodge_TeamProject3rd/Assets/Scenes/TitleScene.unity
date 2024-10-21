@@ -1279,9 +1279,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2713643155920220606, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: LeaderBoard
+      value: 
+      objectReference: {fileID: 1039923871}
+    - target: {fileID: 2713643155920220606, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
       propertyPath: TitleMenuUI
       value: 
       objectReference: {fileID: 1831175035}
+    - target: {fileID: 4437941783921154672, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4369,6 +4377,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366684086367681225, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: LeaderBoard
+      value: 
+      objectReference: {fileID: 1039923871}
     - target: {fileID: 7366684086367681225, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: SelectModeUI
       value: 

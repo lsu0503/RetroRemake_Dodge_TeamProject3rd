@@ -7,6 +7,7 @@ public class SelectPlayModeMenu : MonoBehaviour
 {
     [SerializeField] private GameObject SelectModeUI;
     [SerializeField] private GameObject TitleMenuUI;
+    [SerializeField] private GameObject LeaderBoard;
 
     private void PushSoloPlayBtn() 
     {
@@ -26,6 +27,7 @@ public class SelectPlayModeMenu : MonoBehaviour
     {
         SelectModeUI.SetActive(false);
         TitleMenuUI.SetActive(true);
+        LeaderBoard.SetActive(true);
     }
 
 }
