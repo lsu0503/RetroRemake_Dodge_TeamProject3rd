@@ -16,6 +16,7 @@ public class StageManager : MonoBehaviour
 
     private int alivePlayerAmount;
 
+    public ItemDictionary itemDict { get; private set; }
     public ObjectPool objectPool { get; private set; }
     public MonsterDictionary monsterDict { get; private set; }
     public bool isEnded { get; private set; } = false;
@@ -30,6 +31,7 @@ public class StageManager : MonoBehaviour
 
         objectPool = GetComponent<ObjectPool>();
         monsterDict = GetComponent<MonsterDictionary>();
+        itemDict = GetComponent<ItemDictionary>();
     }
 
     private void Start()

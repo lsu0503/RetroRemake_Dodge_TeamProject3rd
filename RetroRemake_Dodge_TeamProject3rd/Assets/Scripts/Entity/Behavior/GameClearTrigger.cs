@@ -9,9 +9,9 @@ public class GameClearTrigger : MonoBehaviour
         behavior = GetComponent<CharacterBehavior>();
     }
 
-    private void Start()
+    private void OnDestroy()
     {
-        behavior.OnDieEvent += SetGameClear;
+        SetGameClear();
     }
 
     private void SetGameClear()

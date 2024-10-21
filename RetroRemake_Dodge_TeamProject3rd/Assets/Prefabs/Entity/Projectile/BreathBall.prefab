@@ -366,7 +366,7 @@ MonoBehaviour:
   size: 1
   speed: 4
   power: 2
-  targetTag: Enemy
+  targetTag: HitPoint
   type: 0
   isInPool: 1
 --- !u!114 &1560758551507438062
@@ -394,3 +394,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed14b287c4e99d849bf001268607ca0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPiercable: 0

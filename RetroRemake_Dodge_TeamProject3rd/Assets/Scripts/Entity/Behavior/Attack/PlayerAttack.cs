@@ -59,7 +59,7 @@ public class PlayerAttack : ShotBase
         projData.speed = speed;
         projData.power = power;
         projData.type = playerData.playerNum;
-        projData.targetTag = "Enemy";
+        projData.targetTag = "EnemyHitPoint";
         projData.isInPool = true;
 
         projData.InitializeTime();

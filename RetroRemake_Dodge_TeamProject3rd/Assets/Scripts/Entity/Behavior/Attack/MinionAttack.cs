@@ -57,6 +57,8 @@ public class MinionAttack : MonsterAttack
         projData.size = size;
         projData.speed = velocity;
         projData.power = 0;
+        projData.targetTag = "HitPoint";
+        projData.isInPool = false;
 
         projData.InitializeTime();
         projObj.SetActive(true);

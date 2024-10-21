@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class MagneticEffect : MonoBehaviour
 {
@@ -9,8 +10,8 @@ public class MagneticEffect : MonoBehaviour
     {
         if (collision.CompareTag("Item"))
         {
-            Vector2 distance = transform.position - collision.transform.position;
-            collision.GetComponent<Rigidbody2D>().AddForce(distance.normalized * speed,ForceMode2D.Impulse);
+            Vector2 distance = transform.position - collision.gameObject.transform.position;
+            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(distance * speed, ForceMode2D.Impulse);
         }
     }
 }

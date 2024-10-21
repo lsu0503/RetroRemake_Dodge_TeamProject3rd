@@ -5,18 +5,7 @@ using UnityEngine;
 
 public class ItemDictionary : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> items;
-    public Dictionary<int, GameObject> itemDict;
-
-    public void Awake()
-    {
-        itemDict = new Dictionary<int, GameObject>();
-
-        for (int i = 0; i < items.Count; i++)
-        {
-            itemDict.Add(i, items[i]);
-        }
-    }
+    public Dictionary<int, GameObject> itemDict = new Dictionary<int, GameObject>();
 
     public GameObject InstanciateItem(int itemId)
     {
