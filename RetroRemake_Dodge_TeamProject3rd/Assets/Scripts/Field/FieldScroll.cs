@@ -14,7 +14,11 @@ public class FieldScroll : MonoBehaviour
 
     [SerializeField] private GameObject[] fields;
 
-    
+    private void Start()
+    {
+        isScrollStopped = false;
+    }
+
     private void Update()
     {
         ScrollField();
