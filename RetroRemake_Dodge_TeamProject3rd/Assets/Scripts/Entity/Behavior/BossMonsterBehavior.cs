@@ -9,8 +9,10 @@ public class BossMonsterBehavior: MonsterBehavior
         OnSpawnEvent += UpdateHealthBar;
         OnSpawnEvent += ActivateHealthBar;
         OnDieEvent += EraseBulletsOnDie;
+        OnDieEvent += SetStageSetting;
         OnDieEvent += DeactivateHealthBar;
         base.Start();
+        currentLife = data.life;
     }
 
     public override void GetDamage(ProjectileData projData)
@@ -34,6 +36,12 @@ public class BossMonsterBehavior: MonsterBehavior
                     Destroy(projObj);
             }
         }
+    }
+
+    public void SetStageSetting()
+    {
+        FieldScroll.SetScrollRestart();
+        MonsterGenerator.Instance.SetBossDefeat();
     }
 
     public void ActivateHealthBar()

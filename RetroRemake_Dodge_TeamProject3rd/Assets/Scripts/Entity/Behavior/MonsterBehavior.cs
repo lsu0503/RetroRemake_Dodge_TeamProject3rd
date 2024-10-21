@@ -14,6 +14,10 @@ public class MonsterBehavior : CharacterBehavior
     protected virtual void Start()
     {
         currentLife = data.life;
+
+        if (MonsterGenerator.Instance.level >= 2)
+            currentLife *= 15;
+
         isDie = false;
 
         OnHitEvent += GetDamage;
@@ -48,6 +52,6 @@ public class MonsterBehavior : CharacterBehavior
 
         isDie = false;
 
-        Destroy(gameObject, 2.0f);
+        Destroy(gameObject, 0.5f);
     }
 }

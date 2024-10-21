@@ -60,18 +60,6 @@ public class PlayerCharacterBehavior : CharacterBehavior
     public void OnDie()
     {
         isDie = true;
-
-        foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>())
-        {
-            Color color = renderer.color;
-            color.a = 0.3f;
-            renderer.color = color;
-        }
-
-        foreach (Behaviour behaviour in GetComponentsInChildren<Behaviour>())
-        {
-            behaviour.enabled = false;
-        }
     }
 
     public void BulletEraseOnDie()
@@ -107,18 +95,6 @@ public class PlayerCharacterBehavior : CharacterBehavior
                 transform.position = new Vector3(-14.5f, -2.5f, 0.0f);
 
             recoverTimeCurrent = -2.5f;
-
-            foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>())
-            {
-                Color color = renderer.color;
-                color.a = 1.0f;
-                renderer.color = color;
-            }
-
-            foreach (Behaviour behaviour in GetComponentsInChildren<Behaviour>())
-            {
-                behaviour.enabled = true;
-            }
 
             isDie = false;
 

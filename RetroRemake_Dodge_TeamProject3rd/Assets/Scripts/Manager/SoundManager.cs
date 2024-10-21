@@ -30,6 +30,7 @@ public class SoundManager : MonoBehaviour
         PlayBgm(0);
         bgmVolumeSlider.onValueChanged.AddListener(BgmVolumeSlider);
     }
+
     private void LoadBgmClips()
     {
         bgmClips = Resources.LoadAll<AudioClip>("Bgm");
