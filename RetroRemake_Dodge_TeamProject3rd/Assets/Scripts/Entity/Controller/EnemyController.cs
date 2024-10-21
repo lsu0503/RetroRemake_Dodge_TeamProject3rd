@@ -5,7 +5,7 @@ public class EnemyController : Controller
 {
     protected MonsterData data;
     public int actionSelector;
-    private int[] moveDirectionOnLegion = new int[] { 1, 1 };
+    private int[] moveDirectionOnLegion = new int[] { -11, 1 };
 
     private void Awake()
     {
@@ -14,6 +14,12 @@ public class EnemyController : Controller
             actionSelector = -1;
         else
             actionSelector = 0;
+    }
+
+    private void Start()
+    {
+        if (MonsterGenerator.Instance.level >= 2)
+            timeToNextAttack = 0.5f - (0.1f * GameManager.Instance.difficulty);
     }
 
     protected virtual void Update()
@@ -27,11 +33,8 @@ public class EnemyController : Controller
         {
             CallMoveEvent(new Vector2(0.5f * moveDirectionOnLegion[0], 1.0f * moveDirectionOnLegion[1]).normalized);
 
-            if (transform.position.x >= 12)
-                moveDirectionOnLegion[0] = -1;
-
-            else if (transform.position.x <= 8)
-                moveDirectionOnLegion[0] = 1;
+            if (transform.position.x <= 11)
+                moveDirectionOnLegion[0] = 0;
 
             if (transform.position.y >= 5)
                 moveDirectionOnLegion[1] = -1;

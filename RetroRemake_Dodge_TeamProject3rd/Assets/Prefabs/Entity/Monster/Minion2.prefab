@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4785243111611347263}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: -754839373518263782}
   - component: {fileID: -305311344402316006}
   m_Layer: 0
-  m_Name: MonsterTest 1
+  m_Name: Minion2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,9 +259,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projPrefs:
   - {fileID: 3714296746097185940, guid: c955978a88fcc7d4e8c1502951816b11, type: 3}
+  - {fileID: 3714296746097185940, guid: 86f168c5d2e7fec46a4b902bc650aa6f, type: 3}
+  - {fileID: 3714296746097185940, guid: 959b5450fd9da124483111e6a5922cd3, type: 3}
+  - {fileID: 3714296746097185940, guid: 0b7e2059730b3944eb040534442f7013, type: 3}
+  - {fileID: 3714296746097185940, guid: 156a3af59d823c0468a8252c4bf108d1, type: 3}
   duration: 20
-  size: 2
-  speed: 1.5
+  size: 2.5
+  speed: 2
   projSpawnPos: {fileID: 4785243111611347263}
   projAngleSpace:
   - 0
@@ -271,9 +275,10 @@ MonoBehaviour:
   shotVelTerm:
   - 0
   - 0.5
-  - 0.3
-  shotsPerAttack: 010000000200000005000000
+  - 0.4
+  shotsPerAttack: 010000000200000003000000
   isLockOn: 1
+  projPrefsNum: 000000000000000000000000
 --- !u!114 &6778385447354617284
 MonoBehaviour:
   m_ObjectHideFlags: 0
