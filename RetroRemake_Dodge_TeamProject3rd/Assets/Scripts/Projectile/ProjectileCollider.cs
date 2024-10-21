@@ -7,6 +7,7 @@ public class ProjectileCollider : MonoBehaviour
 {
     public event Action<Collider2D> OnCollisionEvent;
     private ProjectileData data;
+    [SerializeField] private bool isPiercable;
 
     private void Awake()
     {
@@ -29,11 +30,14 @@ public class ProjectileCollider : MonoBehaviour
         {
             collision.gameObject.GetComponent<CharacterBehavior>().OnHit(data);
 
-            if(data.isInPool)
-                gameObject.SetActive(false);
+            if (!isPiercable)
+            {
+                if (data.isInPool)
+                    gameObject.SetActive(false);
 
-            else
-                Destroy(gameObject);
+                else
+                    Destroy(gameObject);
+            }
         }
     }
 }
