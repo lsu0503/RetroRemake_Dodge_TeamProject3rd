@@ -45,8 +45,8 @@ public class PlayerBomb : AttackBase
                 projData.speed = speed;
                 projData.power = power;
                 projData.type = playerData.playerNum;
-                projData.targetTag = "Enemy";
-                projData.isInPool = true;
+                projData.targetTag = "EnemyHitPoint";
+                projData.isInPool = false;
             }
         }
     }

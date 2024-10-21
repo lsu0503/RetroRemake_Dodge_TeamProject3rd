@@ -10,7 +10,7 @@ public class EnemyController : Controller
     private void Awake()
     {
         data = GetComponent<MonsterData>();
-        if (MonsterGenerator.Instance.level >= 2)
+        if (MonsterGenerator.Instance.level >= 2 || data.isBoss)
             actionSelector = -1;
         else
             actionSelector = 0;
@@ -23,7 +23,24 @@ public class EnemyController : Controller
 
     protected virtual void Movement()
     {
-        if (actionSelector == 0)
+        if (actionSelector == -1)
+        {
+            CallMoveEvent(new Vector2(0.5f * moveDirectionOnLegion[0], 1.0f * moveDirectionOnLegion[1]).normalized);
+
+            if (transform.position.x >= 12)
+                moveDirectionOnLegion[0] = -1;
+
+            else if (transform.position.x <= 8)
+                moveDirectionOnLegion[0] = 1;
+
+            if (transform.position.y >= 5)
+                moveDirectionOnLegion[1] = -1;
+
+            else if (transform.position.y <= -4.5)
+                moveDirectionOnLegion[1] = 1;
+        }
+
+        else if (actionSelector == 0)
         {
             CallMoveEvent(Vector2.left);
 
@@ -37,23 +54,6 @@ public class EnemyController : Controller
 
             if (transform.position.x >= 18)
                 Destroy(gameObject);
-        }
-
-        else if(actionSelector == -1)
-        {
-            CallMoveEvent(new Vector2(0.5f * moveDirectionOnLegion[0], 1.0f * moveDirectionOnLegion[1]).normalized);
-
-            if (transform.position.x >= 14)
-                moveDirectionOnLegion[0] = -1;
-
-            else if (transform.position.x <= 1)
-                moveDirectionOnLegion[0] = 1;
-
-            if (transform.position.y >= 5)
-                moveDirectionOnLegion[1] = -1;
-
-            else if (transform.position.y <= -4.5)
-                moveDirectionOnLegion[1] = 1;
         }
     }
 }

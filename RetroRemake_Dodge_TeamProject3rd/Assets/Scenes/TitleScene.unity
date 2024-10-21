@@ -1282,6 +1282,78 @@ PrefabInstance:
       propertyPath: TitleMenuUI
       value: 
       objectReference: {fileID: 1831175035}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 532775707}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HardBtnPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DifficultyMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4851816529300692837, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067445409404564176, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 532775707}
+    - target: {fileID: 5067445409404564176, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EasyBtnPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067445409404564176, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DifficultyMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067445409404564176, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 532775707}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NormalBtnPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DifficultyMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408094030045840646, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7212164743122119376, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
       propertyPath: m_Name
       value: SelectModeUI
@@ -1756,6 +1828,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &532775707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6511401794036245516, guid: 32d41ca54ab3fb940a3e9213ee9c651b, type: 3}
+  m_PrefabInstance: {fileID: 339121169}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44182863860d58346a16289c79ff7802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592800459
 GameObject:
   m_ObjectHideFlags: 0
@@ -4275,8 +4358,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1237825698}
     - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullScreenMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858322451721633049, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScreenModeManager, Assembly-CSharp
+      value: ScreenChoiceMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5703716408963886187, guid: 63fa03f5a53a3514fa019245bf4d01a5, type: 3}
       propertyPath: m_AnchorMax.y

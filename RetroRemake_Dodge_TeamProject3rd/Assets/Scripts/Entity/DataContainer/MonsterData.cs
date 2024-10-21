@@ -5,6 +5,7 @@ public class MonsterData: MonoBehaviour
     protected CharacterBehavior behavior;
 
     public int life;
+    public bool isBoss;
     [SerializeField] protected int scoreAcquireOnHit;
     [SerializeField] protected int scoreAcquireOnDefeat;
 

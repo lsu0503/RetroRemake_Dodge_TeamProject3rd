@@ -12,6 +12,7 @@ TagManager:
   - BorderLeft
   - Enemy
   - Item
+  - EnemyHitPoint
   layers:
   - Default
   - TransparentFX

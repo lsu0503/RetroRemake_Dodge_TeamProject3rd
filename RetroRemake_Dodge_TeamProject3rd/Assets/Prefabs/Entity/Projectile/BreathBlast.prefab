@@ -253,7 +253,7 @@ MonoBehaviour:
   size: 15
   speed: 5
   power: 100
-  targetTag: Enemy
+  targetTag: HitPoint
   type: 0
   isInPool: 0
 --- !u!114 &1560758551507438062

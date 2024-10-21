@@ -28,8 +28,7 @@ public class ProjectileCollider : MonoBehaviour
     {
         if (collision.gameObject.CompareTag(data.targetTag))
         {
-            collision.gameObject.GetComponent<CharacterBehavior>().OnHit(data);
-
+            collision.gameObject.GetComponent<HitPoint>().OnHit(data);
             if (!isPiercable)
             {
                 if (data.isInPool)

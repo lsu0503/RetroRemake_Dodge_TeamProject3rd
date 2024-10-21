@@ -12,7 +12,6 @@ public class MonsterDictionary : MonoBehaviour
 
         GameObject spawnMonster = Instantiate(monsterDict[monsterId]);
         spawnMonster.SetActive(false);
-        Debug.Log(spawnMonster.name);
         return spawnMonster;
     }
 }
