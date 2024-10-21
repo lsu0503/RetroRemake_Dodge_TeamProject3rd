@@ -8,7 +8,7 @@ public class MonsterBehavior : CharacterBehavior
 
     private void Awake()
     {
-        data = new MonsterData();
+        data = GetComponent<MonsterData>();
     }
 
     protected virtual void Start()

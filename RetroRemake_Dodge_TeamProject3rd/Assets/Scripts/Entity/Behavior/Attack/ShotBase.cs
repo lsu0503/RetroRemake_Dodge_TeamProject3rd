@@ -2,7 +2,7 @@
 
 public class ShotBase : AttackBase
 {
-    private void Start()
+    protected virtual void Start()
     {
         controller.OnAttackEvent += UseAttack;
     }

@@ -43,8 +43,8 @@ public class PlayerCharacterBehavior : CharacterBehavior
         {
             CallHitEvent(projData);
             data.LoseLife();
-            Invoke("CallDieEvent", 2.5f);
-            Invoke("CallSpawnEvent", 5.0f);
+            CallDieEvent();
+            CallSpawnEvent();
             return true;
         }
 
