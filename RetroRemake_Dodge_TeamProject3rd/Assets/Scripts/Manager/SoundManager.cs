@@ -7,7 +7,6 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     [SerializeField]private AudioClip[] bgmClips;
-    [SerializeField] private Slider bgmVolumeSlider;
     private AudioSource bgmPlayer;
 
     private void Awake()
@@ -28,7 +27,6 @@ public class SoundManager : MonoBehaviour
     private void Start()
     {
         PlayBgm(0);
-        bgmVolumeSlider.onValueChanged.AddListener(BgmVolumeSlider);
     }
 
     private void LoadBgmClips()
@@ -47,10 +45,5 @@ public class SoundManager : MonoBehaviour
         {
             bgmPlayer.Stop();
         }
-    }
-
-    public void BgmVolumeSlider(float value)
-    {
-        bgmPlayer.volume = value;
     }
 }
