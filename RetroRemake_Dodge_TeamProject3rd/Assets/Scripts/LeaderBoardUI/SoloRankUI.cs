@@ -28,6 +28,7 @@ public class SoloRankUI : LeaderBoardUI
             for (int i = 0; i < 3; i++)
             {
                 PlayerPrefs.SetInt($"SoloRank{i}", SoloRankingList[i]);
+                PlayerPrefs.Save();
             }
         }
     }
@@ -36,7 +37,7 @@ public class SoloRankUI : LeaderBoardUI
     {
         for (int i = 0; i < 3; i ++)
         {
-            SoloPlayerTextList[0].text = PlayerPrefs.GetInt($"SoloRank{i}",0).ToString("D10");
+            SoloPlayerTextList[i].text = PlayerPrefs.GetInt($"SoloRank{i}",0).ToString("D10");
         }
     } 
 }
