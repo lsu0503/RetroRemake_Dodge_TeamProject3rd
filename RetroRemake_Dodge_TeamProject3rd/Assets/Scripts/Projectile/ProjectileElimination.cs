@@ -23,10 +23,10 @@ public class ProjectileElimination : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             if (collision.gameObject.GetComponent<ProjectileData>().isInPool)
-                gameObject.SetActive(false);
+                collision.gameObject.SetActive(false);
 
             else
-                Destroy(gameObject);
+                Destroy(collision.gameObject);
         }
     }
 }

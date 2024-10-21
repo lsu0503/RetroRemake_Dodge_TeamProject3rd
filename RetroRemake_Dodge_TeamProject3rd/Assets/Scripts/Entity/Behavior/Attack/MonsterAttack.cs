@@ -7,13 +7,18 @@ public class MonsterAttack : ShotBase
     protected Transform[] targetTransformArray;
     protected int actionSelector;
 
-    private void Awake()
+    [SerializeField] protected GameObject[] projPrefs;
+
+    protected override void Awake()
     {
+        base.Awake();
         monsterData = GetComponent<MonsterData>();
     }
 
-    protected void Start()
+    protected override void Start()
     {
+        base.Start();
+
         GameObject[] targetObjArray = GameObject.FindGameObjectsWithTag("Player");
         List<Transform> targetTransformList = new List<Transform>();
 

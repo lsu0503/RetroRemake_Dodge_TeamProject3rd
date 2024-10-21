@@ -12,7 +12,12 @@ public class EnemyController : Controller
 
     protected virtual void Update()
     {
-        if(data.actionSelector == 0)
+        Movement();
+    }
+
+    protected virtual void Movement()
+    {
+        if (data.actionSelector == 0)
         {
             CallMoveEvent(Vector2.left);
 
@@ -20,11 +25,11 @@ public class EnemyController : Controller
                 data.actionSelector = 1;
         }
 
-        if(data.actionSelector == 1)
+        if (data.actionSelector == 1)
         {
             CallMoveEvent(Vector2.right);
 
-            if(transform.position.x >= 18)
+            if (transform.position.x >= 18)
                 Destroy(gameObject);
         }
     }

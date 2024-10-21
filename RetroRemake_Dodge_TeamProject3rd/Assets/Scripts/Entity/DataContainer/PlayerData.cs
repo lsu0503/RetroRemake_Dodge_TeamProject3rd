@@ -34,6 +34,7 @@ public class PlayerData : MonoBehaviour
             if (bomb > 5)
                 bomb = 5;
 
+            uiHandler.UpdatePlayerBomb();
             return true;
         }
     }
