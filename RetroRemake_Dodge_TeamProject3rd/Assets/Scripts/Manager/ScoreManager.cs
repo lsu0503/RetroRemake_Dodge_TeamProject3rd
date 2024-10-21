@@ -30,10 +30,10 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
 
-    public int player1Score { get; private set; }
-    public int player2Score { get; private set; }
+    public int player1Score;
+    public int player2Score;
     
-    public List<BossDefeatInformation> BDIList = new List<BossDefeatInformation>();  
+    public List<BossDefeatInformation> BDIList = new List<BossDefeatInformation>();
 
     private void Awake()
     {
