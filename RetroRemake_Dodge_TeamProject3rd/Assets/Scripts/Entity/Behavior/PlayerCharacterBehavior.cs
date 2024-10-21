@@ -42,9 +42,13 @@ public class PlayerCharacterBehavior : CharacterBehavior
         if (recoverTimeCurrent >= recoverTimeMax)
         {
             CallHitEvent(projData);
-            data.LoseLife();
+            bool isDied = data.LoseLife();
             CallDieEvent();
             CallSpawnEvent();
+
+            if (!isDied)
+                StageManager.Instance.PlayerDie();
+
             return true;
         }
 
@@ -64,9 +68,9 @@ public class PlayerCharacterBehavior : CharacterBehavior
             renderer.color = color;
         }
 
-        foreach (Controller controller in GetComponentsInChildren<Controller>())
+        foreach (Behaviour behaviour in GetComponentsInChildren<Behaviour>())
         {
-            controller.enabled = false;
+            behaviour.enabled = false;
         }
     }
 
@@ -95,27 +99,30 @@ public class PlayerCharacterBehavior : CharacterBehavior
 
     public void OnSpwan()
     {
-        if (data.playerNum == 0)
-            transform.position = new Vector3(-14.5f, 2.5f, 0.0f);
-        else
-            transform.position = new Vector3(-14.5f, -2.5f, 0.0f);
-
-        recoverTimeCurrent = -2.5f;
-
-        foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>())
+        if (data.isAlive)
         {
-            Color color = renderer.color;
-            color.a = 1.0f;
-            renderer.color = color;
+            if (data.playerNum == 0)
+                transform.position = new Vector3(-14.5f, 2.5f, 0.0f);
+            else
+                transform.position = new Vector3(-14.5f, -2.5f, 0.0f);
+
+            recoverTimeCurrent = -2.5f;
+
+            foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>())
+            {
+                Color color = renderer.color;
+                color.a = 1.0f;
+                renderer.color = color;
+            }
+
+            foreach (Behaviour behaviour in GetComponentsInChildren<Behaviour>())
+            {
+                behaviour.enabled = true;
+            }
+
+            isDie = false;
+
+            gameObject.SetActive(true);
         }
-
-        foreach (Controller controller in GetComponentsInChildren<Controller>())
-        {
-            controller.enabled = true;
-        }
-
-        isDie = false;
-
-        gameObject.SetActive(true);
     }
 }

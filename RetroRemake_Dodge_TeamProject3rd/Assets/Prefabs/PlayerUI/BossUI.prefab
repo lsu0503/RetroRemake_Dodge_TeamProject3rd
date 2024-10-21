@@ -199,6 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 12319142924263573}
+  - component: {fileID: 2497607138745220376}
   m_Layer: 5
   m_Name: BossUI
   m_TagString: Untagged
@@ -227,6 +228,19 @@ RectTransform:
   m_AnchoredPosition: {x: -35, y: 0}
   m_SizeDelta: {x: 70, y: 800}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &2497607138745220376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947801437081100893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7943bfe2609789e47a370e23e04afd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealthGauge: {fileID: 1119191779149211563}
 --- !u!1 &7593365090260897595
 GameObject:
   m_ObjectHideFlags: 0
