@@ -263,16 +263,16 @@ MonoBehaviour:
   speed: 1.5
   projSpawnPos: {fileID: 4785243111611347263}
   projAngleSpace:
-  - 0
-  - 0
-  - 0
-  projsPerShot: 010000000100000001000000
+  - 72
+  - 45
+  - 30
+  projsPerShot: 05000000080000000c000000
   shotVelTerm:
-  - 0.25
-  - 0.25
-  - 0.25
-  shotsPerAttack: 05000000080000000d000000
-  isLockOn: 1
+  - 0
+  - 0
+  - 0
+  shotsPerAttack: 010000000100000001000000
+  isLockOn: 0
 --- !u!114 &6778385447354617284
 MonoBehaviour:
   m_ObjectHideFlags: 0

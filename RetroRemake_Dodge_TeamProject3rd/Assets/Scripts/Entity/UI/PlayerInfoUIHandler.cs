@@ -18,6 +18,8 @@ public class PlayerInfoUIHandler: MonoBehaviour
     [SerializeField] private CharacterBehavior behavior;
     [SerializeField] private Controller controller;
 
+    [SerializeField] private bool isResult;
+
     private void Start()
     {
         if (playerNum == 0)
@@ -44,9 +46,11 @@ public class PlayerInfoUIHandler: MonoBehaviour
         UpdatePlayerBomb();
         UpdatePlayerScore();
 
-        behavior.OnDieEvent += UpdatePlayerLife;
-        controller.OnBombEvent += UpdatePlayerBomb;
-        
+        if (isResult)
+        {
+            behavior.OnDieEvent += UpdatePlayerLife;
+            controller.OnBombEvent += UpdatePlayerBomb;
+        }
     }
 
     private void Update()

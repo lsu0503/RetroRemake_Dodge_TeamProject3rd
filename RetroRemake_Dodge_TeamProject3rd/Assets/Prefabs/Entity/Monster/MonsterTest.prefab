@@ -268,11 +268,11 @@ MonoBehaviour:
   - 0
   projsPerShot: 010000000100000001000000
   shotVelTerm:
-  - 0.25
-  - 0.25
-  - 0.25
-  shotsPerAttack: 05000000080000000d000000
-  isLockOn: 1
+  - 0.4
+  - 0.3
+  - 0.2
+  shotsPerAttack: 030000000500000008000000
+  isLockOn: 0
 --- !u!114 &6778385447354617284
 MonoBehaviour:
   m_ObjectHideFlags: 0

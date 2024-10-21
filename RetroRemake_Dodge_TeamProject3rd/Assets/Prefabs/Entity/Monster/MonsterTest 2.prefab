@@ -264,14 +264,14 @@ MonoBehaviour:
   projSpawnPos: {fileID: 4785243111611347263}
   projAngleSpace:
   - 0
-  - 0
-  - 0
-  projsPerShot: 010000000100000001000000
+  - 30
+  - 15
+  projsPerShot: 010000000300000007000000
   shotVelTerm:
-  - 0.25
-  - 0.25
-  - 0.25
-  shotsPerAttack: 05000000080000000d000000
+  - 0
+  - 0
+  - 0
+  shotsPerAttack: 010000000100000001000000
   isLockOn: 1
 --- !u!114 &6778385447354617284
 MonoBehaviour:

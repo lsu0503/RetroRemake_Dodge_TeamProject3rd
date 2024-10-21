@@ -55,6 +55,7 @@ MonoBehaviour:
   totalScoreText: {fileID: 1784123184586095580}
   bossResultCollectionObj: {fileID: 3866218672114723376}
   bossResultInd: {fileID: 8218217415721972003, guid: 6fcf25ee138cda84bb661de85fe83e41, type: 3}
+  playerData: {fileID: 0}
 --- !u!1 &3968700810738928990
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +396,10 @@ PrefabInstance:
     - target: {fileID: 1020208009036569748, guid: 5abf2b4320b50b145a7576652dfd7170, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105858467736337104, guid: 5abf2b4320b50b145a7576652dfd7170, type: 3}
+      propertyPath: isResult
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2216806098503730674, guid: 5abf2b4320b50b145a7576652dfd7170, type: 3}
       propertyPath: m_Name
