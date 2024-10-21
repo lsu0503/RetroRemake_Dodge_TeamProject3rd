@@ -8,7 +8,6 @@ public class MonsterData: MonoBehaviour
     [SerializeField] protected int scoreAcquireOnHit;
     [SerializeField] protected int scoreAcquireOnDefeat;
 
-    public int actionSelector;
     protected int lastAttacked;
 
     private void Awake()

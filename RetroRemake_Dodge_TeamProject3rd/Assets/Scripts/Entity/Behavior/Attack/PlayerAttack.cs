@@ -24,6 +24,21 @@ public class PlayerAttack : ShotBase
         playerData = GetComponent<PlayerData>();
     }
 
+    protected override void Start()
+    {
+        base.Start();
+        if (GameManager.Instance.isMultiplay)
+        {
+            projAngleSpace = 5.0f;
+            projsPerShot = 3;
+        }
+        else
+        {
+            projAngleSpace = 3.0f;
+            projsPerShot = 5;
+        }
+    }
+
     public override void UseAttack()
     {
         float minAngle = -(projsPerShot - 1) / 2f * projAngleSpace;

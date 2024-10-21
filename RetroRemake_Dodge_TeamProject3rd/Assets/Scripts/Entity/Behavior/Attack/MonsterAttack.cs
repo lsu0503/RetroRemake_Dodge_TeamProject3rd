@@ -28,8 +28,13 @@ public class MonsterAttack : ShotBase
         targetTransformArray = targetTransformList.ToArray();
     }
 
-    protected Transform SetTargetTransform()
+    protected float SetTargetTransform()
     {
-        return targetTransformArray[Random.Range(0, targetTransformArray.Length)];
+        Transform target = targetTransformArray[Random.Range(0, targetTransformArray.Length)];
+        Vector2 direction = (Vector2)(target.position - gameObject.transform.position);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Debug.Log(angle);
+
+        return angle;
     }
 }

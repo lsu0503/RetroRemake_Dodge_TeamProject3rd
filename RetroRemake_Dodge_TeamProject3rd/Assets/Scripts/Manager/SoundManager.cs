@@ -28,6 +28,7 @@ public class SoundManager : MonoBehaviour
     {
         PlayBgm(0);
     }
+
     private void LoadBgmClips()
     {
         bgmClips = Resources.LoadAll<AudioClip>("Bgm");

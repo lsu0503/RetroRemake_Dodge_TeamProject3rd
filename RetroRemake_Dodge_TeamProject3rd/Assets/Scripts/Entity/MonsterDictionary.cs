@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class MonsterDictionary : MonoBehaviour
 {
-    public Dictionary<string, GameObject> monsterDict;
+    public Dictionary<int, GameObject> monsterDict = new Dictionary<int, GameObject>();
     
-    public GameObject InstanciateItem(string monsterName)
+    public GameObject InstanciateMonster(int monsterId)
     {
-        if (!monsterDict.ContainsKey(monsterName))
+        if (!monsterDict.ContainsKey(monsterId))
             return null;
 
-        GameObject spawnMonster = Instantiate(monsterDict[monsterName]);
+        GameObject spawnMonster = Instantiate(monsterDict[monsterId]);
         spawnMonster.SetActive(false);
+        Debug.Log(spawnMonster.name);
         return spawnMonster;
     }
 }
