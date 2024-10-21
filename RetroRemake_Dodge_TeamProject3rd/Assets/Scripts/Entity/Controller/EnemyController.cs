@@ -1,29 +1,31 @@
-﻿using System.Collections.Generic;
-using Unity.VisualScripting;
+﻿using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : Controller
 {
-    private Transform[] targetTransformArray;
+    protected MonsterData data;
 
-    private void Start()
+    private void Awake()
     {
-        GameObject[] targetObjArray = GameObject.FindGameObjectsWithTag("Player");
-        List<Transform> targetTransformList = new List<Transform>();
-
-        for(int i = 0; i < targetObjArray.Length; i++)
-            targetTransformList.Add(targetObjArray[i].transform);
-
-        targetTransformArray = targetTransformList.ToArray();
+        data = GetComponent<MonsterData>();
     }
 
-    public Transform SetTargetTransform()
+    protected virtual void Update()
     {
-        return targetTransformArray[Random.Range(0, targetTransformArray.Length)];
-    }
+        if(data.actionSelector == 0)
+        {
+            CallMoveEvent(Vector2.left);
 
-    protected virtual void Move()
-    {
+            if (transform.position.x <= 5)
+                data.actionSelector = 1;
+        }
 
+        if(data.actionSelector == 1)
+        {
+            CallMoveEvent(Vector2.right);
+
+            if(transform.position.x >= 18)
+                Destroy(gameObject);
+        }
     }
 }
