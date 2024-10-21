@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,7 +51,7 @@ public class PlayerInfoUIHandler: MonoBehaviour
 
     private void Update()
     {
-        if (!StageManager.Instance.GameOver)
+        if (!StageManager.Instance.isEnded)
             UpdatePlayerScore();
     }
 
@@ -63,9 +64,16 @@ public class PlayerInfoUIHandler: MonoBehaviour
             lifeIcons[i].SetLife(1);
         }
 
-        for(i = thisPlayerData.life; i < lifeIcons.Count; i++)
+        for(Math.Max(0, thisPlayerData.life); i < lifeIcons.Count; i++)
         {
             lifeIcons[i].SetLife(0);
+        }
+
+        if (!thisPlayerData.isAlive)
+        {
+            Color color = imageComponent.color;
+            color.a = 0.3f;
+            imageComponent.color = color;
         }
     }
 

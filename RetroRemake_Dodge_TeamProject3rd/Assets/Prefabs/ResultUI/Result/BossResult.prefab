@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1949229925844484379}
   - component: {fileID: 4171253500443467663}
   m_Layer: 5
-  m_Name: MonsterClearpercentText
+  m_Name: DamageRatioText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5522486895604005698}
-  - component: {fileID: 2353471276674676396}
+  - component: {fileID: 3416265686567041188}
   m_Layer: 5
   m_Name: BossResult
   m_TagString: Untagged
@@ -173,7 +173,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2353471276674676396
+--- !u!114 &3416265686567041188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a900f0003876a894f8221706ea82ebed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossImg: {fileID: 0}
-  ratioTxt: {fileID: 0}
-  totalScoreTxt: {fileID: 0}
+  bossImg: {fileID: 8904656336098256007}
+  ratioTxt: {fileID: 4171253500443467663}
+  totalScoreTxt: {fileID: 3024540756174072718}
 --- !u!1 &8612416657848221918
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 8187674863302313103}
   - component: {fileID: 3024540756174072718}
   m_Layer: 5
-  m_Name: MonsterscoreText
+  m_Name: TotalScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 7203243549609993225}
   - component: {fileID: 8904656336098256007}
   m_Layer: 5
-  m_Name: MonsterIcon1
+  m_Name: BossImange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

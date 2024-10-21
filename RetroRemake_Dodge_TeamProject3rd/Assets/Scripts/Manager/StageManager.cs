@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SceneManagement;
@@ -7,17 +8,17 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager Instance;
 
-    public ObjectPool objectPool { get; private set; }
-    public MonsterDictionary monsterDict { get; private set; }
-
     [SerializeField] private GameObject SoloClearUi;
     [SerializeField] private GameObject MultiClearUi;
     [SerializeField] private GameObject DefeatUi;
 
-    [SerializeField]private BossHealthUI bossHealthUI;
+    [SerializeField] private BossHealthUI bossHealthUI;
 
-    public bool isCleared {  get; private set; }
-    public bool GameOver { get; private set; } = false;
+    private int alivePlayerAmount;
+
+    public ObjectPool objectPool { get; private set; }
+    public MonsterDictionary monsterDict { get; private set; }
+    public bool isEnded { get; private set; } = false;
 
     private void Awake()
     {
@@ -34,6 +35,11 @@ public class StageManager : MonoBehaviour
     private void Start()
     {
         InitializeUi();
+
+        if (GameManager.Instance.isMultiplay)
+            alivePlayerAmount = 2;
+        else
+            alivePlayerAmount = 1;
     }
 
     public void InitializeUi()
@@ -47,22 +53,7 @@ public class StageManager : MonoBehaviour
         else if (DefeatUi == true)
             DefeatUi.SetActive(false);
     }
-    public void GameClear()
-    {
-        GameOver = true;
-        isCleared= true;
 
-        DisplayClearUI(GameManager.Instance.isMultiplay);
-    }
-
-    public void GameDefeat() 
-    {
-        GameOver = true;
-        isCleared= false;
-
-        DisplayDefeatUI();
-    }
-    
     public void DisplayClearUI(bool isMulti) 
     {
         if (!isMulti)
@@ -85,5 +76,24 @@ public class StageManager : MonoBehaviour
     public void SetBossHealthUIGaugeFillAmount(float amount)
     {
         bossHealthUI.SetGaugeFill(amount);
+    }
+
+    public void PlayerDie()
+    {
+        alivePlayerAmount--;
+        if (alivePlayerAmount <= 0)
+            GameOver(false);
+    }
+
+    private void GameOver(bool isCleared)
+    {
+        FieldScroll.SetScrollStop();
+        Time.timeScale = 0.0f;
+
+        if (isCleared)
+            DisplayClearUI(GameManager.Instance.isMultiplay);
+
+        else
+            DisplayDefeatUI();
     }
 }

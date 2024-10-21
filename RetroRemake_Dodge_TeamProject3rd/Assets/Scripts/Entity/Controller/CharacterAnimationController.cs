@@ -12,7 +12,7 @@ public class CharacterAnimationController : AnimationController
         controller.OnMoveEvent += Move;
     }
 
-    protected void Move(Vector2 vector)
+    protected virtual void Move(Vector2 vector)
     {
         if (vector.magnitude > magnituteThreshold)
         {

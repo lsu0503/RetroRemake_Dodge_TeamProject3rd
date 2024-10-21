@@ -17,5 +17,3 @@ public class BossResultUI : MonoBehaviour
         totalScoreTxt.text = info.totalScore.ToString();
     }
 }
-
-
