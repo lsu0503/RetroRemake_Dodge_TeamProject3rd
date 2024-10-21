@@ -10,8 +10,6 @@ public class ResultScoreIndUi : MonoBehaviour
 
     [SerializeField] private int playerNum;
 
-    private int remainLife;
-    private int remainBomb;
     private int scorePerLife = 1000000;
     private int scorePerBomb = 100000;
 
@@ -20,6 +18,8 @@ public class ResultScoreIndUi : MonoBehaviour
     [SerializeField] private TextMeshProUGUI totalScoreText;
     [SerializeField] private Transform bossResultCollectionObj;
     [SerializeField] private GameObject bossResultInd;
+
+    [SerializeField] private PlayerData playerData;
 
     private void OnEnable()
     {
@@ -49,20 +49,20 @@ public class ResultScoreIndUi : MonoBehaviour
         switch(playerNum)
         {
             case 0:
-                totalScore = ScoreManager.instance.player1Score + (remainLife * scorePerLife) + (remainBomb * scorePerBomb);
-                for (int i = 0; i < bossScore.Count; i++)
-                {
-                    totalScore += bossScore[i];
-                }
+                totalScore = ScoreManager.instance.player1Score;
                 break;
             case 1:
-                totalScore = ScoreManager.instance.player2Score + (remainLife * scorePerLife) + (remainBomb * scorePerBomb);
-                for (int i = 0; i < bossScore.Count; i++)
-                {
-                    totalScore += bossScore[i];
-                }
+                totalScore = ScoreManager.instance.player2Score;
                 break;
         }
+        
+        totalScore += (playerData.life * scorePerLife) + (playerData.bomb * scorePerBomb);
+
+        for (int i = 0; i < bossScore.Count; i++)
+        {
+            totalScore += bossScore[i];
+        }
+        
         totalScoreText.text = $"{totalScore}";
     }
 
