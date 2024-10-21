@@ -46,7 +46,7 @@ public class PlayerInfoUIHandler: MonoBehaviour
         UpdatePlayerBomb();
         UpdatePlayerScore();
 
-        if (isResult)
+        if (!isResult)
         {
             behavior.OnDieEvent += UpdatePlayerLife;
             controller.OnBombEvent += UpdatePlayerBomb;
