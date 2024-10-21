@@ -8,6 +8,9 @@ using UnityEngine.UI;
 
 public class LeaderBoardManager : MonoBehaviour
 {
-    
+    protected virtual void OnDestroy()
+    {
+
+    }
 }
     

@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class LeaderBoardRegistrator : MonoBehaviour
 {
-    private MultiRankManager multiRankManager;
+    private MultiRankRestrator multiRankManager;
     private SoloRankManager soloRankManager;
 
     private void Awake()
     {
-        multiRankManager = GetComponent<MultiRankManager>();
+        multiRankManager = GetComponent<MultiRankRestrator>();
         soloRankManager = GetComponent<SoloRankManager>();
     }
     public void SetLeaderBoard()
