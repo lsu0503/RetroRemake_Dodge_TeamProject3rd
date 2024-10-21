@@ -5,7 +5,7 @@ public class SoloRankManager : LeaderBoardManager
 {
     private int[] SoloRankingList = new int[4];
 
-    protected override void SoloRankUpdate(int playerScore1)
+    public void SoloRankUpdate(int playerScore1)
     {
         SoloRankChange(playerScore1);
     }

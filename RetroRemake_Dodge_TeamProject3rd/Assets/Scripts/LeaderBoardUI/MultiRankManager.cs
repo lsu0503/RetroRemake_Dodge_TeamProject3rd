@@ -6,7 +6,7 @@ public class MultiRankManager : LeaderBoardManager
     private int[] MultiRankingList1 = new int[4];
     private int[] MultiRankingList2 = new int[4];
 
-    protected override void MultiRankUpdate(int playerScore1, int playerScore2)
+    public void MultiRankUpdate(int playerScore1, int playerScore2)
     {
         MultiRankChangeP1(playerScore1);
         MultiRankChangeP2(playerScore2);
@@ -20,7 +20,7 @@ public class MultiRankManager : LeaderBoardManager
             {
                 MultiRankingList1[i] = PlayerPrefs.GetInt($"Multi0Rank{i}", 0);
             }
-
+            
             MultiRankingList1[3] = currentScore1;
             Array.Sort(MultiRankingList1);
             Array.Reverse(MultiRankingList1);

@@ -21,7 +21,7 @@ public class ResultScoreIndUi : MonoBehaviour
 
     [SerializeField] private PlayerData playerData;
 
-    private void OnEnable()
+    private void Start()
     {
         CalculateBossScore(playerNum);
         CalculateTotalScore(playerNum);
@@ -63,7 +63,14 @@ public class ResultScoreIndUi : MonoBehaviour
         {
             totalScore += bossScore[i];
         }
-        
+        if (playerNum == 0)
+        {
+            ScoreManager.instance.player1Score = totalScore;
+        }
+        else
+        {
+            ScoreManager.instance.player2Score = totalScore;
+        }
         totalScoreText.text = $"{totalScore}";
     }
 
