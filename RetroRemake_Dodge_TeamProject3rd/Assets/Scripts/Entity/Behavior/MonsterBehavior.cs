@@ -52,6 +52,6 @@ public class MonsterBehavior : CharacterBehavior
 
         isDie = false;
 
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject);
     }
 }
