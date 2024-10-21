@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1203ab4adb4244bb59b83c0e65495f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InGameMenu: {fileID: 0}
+  InGameMenu: {fileID: 2234567382985526892}
 --- !u!114 &2380292549847348485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,9 +146,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1915383021998918585, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2380292549847348485}
+    - target: {fileID: 1915383021998918585, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetryBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915383021998918585, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResultUiButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915383021998918585, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4974320458858140226, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611928978085435771, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2380292549847348485}
+    - target: {fileID: 5611928978085435771, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnTitileBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611928978085435771, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ResultUiButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5611928978085435771, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7570652180431049151, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
       propertyPath: m_AnchorMax.y
@@ -234,6 +266,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9022896822031255879, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7797957337919354518}
+    - target: {fileID: 9022896822031255879, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022896822031255879, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: InGameMenuUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022896822031255879, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 9177096371907876603, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -243,6 +291,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+--- !u!1 &2234567382985526892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1813874367759354459, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
+  m_PrefabInstance: {fileID: 445550778820412471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7584058217477039237 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8003203124756258994, guid: 0f01297cfa2bfe947abbe0a758882795, type: 3}
