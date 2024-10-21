@@ -2431,6 +2431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 845516464}
   - component: {fileID: 845516465}
+  - component: {fileID: 845516466}
   m_Layer: 5
   m_Name: SoloRank
   m_TagString: Untagged
@@ -2486,6 +2487,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &845516466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845516463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5c9766b59e8b441bca872214765776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SoloPlayerTextList:
+  - {fileID: 327823865}
+  - {fileID: 1149067384}
+  - {fileID: 459467971}
 --- !u!1 &858291174
 GameObject:
   m_ObjectHideFlags: 0
