@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor.Search;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class ItemDictionary : MonoBehaviour
