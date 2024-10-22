@@ -25,7 +25,7 @@ public class ResultScoreIndUi : MonoBehaviour
     {
         CalculateBossScore(playerNum);
         CalculateTotalScore(playerNum);
-        InstanciateBossResultInd();
+        InstantiateBossResultInd();
     }
 
     private void CalculateBossScore(int playerNum)
@@ -74,7 +74,7 @@ public class ResultScoreIndUi : MonoBehaviour
         totalScoreText.text = $"{totalScore}";
     }
 
-    private void InstanciateBossResultInd()
+    private void InstantiateBossResultInd()
     {
         List<BossDefeatInformation> bdiList = ScoreManager.instance.BDIList;
 
