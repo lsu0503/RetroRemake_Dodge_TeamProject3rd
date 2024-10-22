@@ -28,12 +28,15 @@ public class VoulumeController : MonoBehaviour
             BGMSlider.value = 0.5f;     // PlayerPrefs에 Volume이 없을 경우
         }
 
-        //if (PlayerPrefs.HasKey("SFXVolume"))
-        //{
-        //    SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
-        //}
-        //else
+        if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            SFXSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        }
+        else
+        {
             SFXSlider.value = 0.5f;
+        }
+            
 
         // audioMixer.SetFloat("audioMixer에 설정해놓은 Parameter", float 값)
         // audioMixer에 미리 설정해놓은 parameter 값을 변경하는 코드.
